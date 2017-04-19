@@ -14,3 +14,9 @@ body {
   text-align: center;
   font-weight: 100;
 }
+
+#banner {
+    background:url('/images/JagBot 6504 @ 2017 FRC - 078.JPG');
+    width:100%;
+    min-height:189px;
+}
