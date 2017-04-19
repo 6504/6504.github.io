@@ -8,6 +8,13 @@ html, body {
 
 body { 
   font-family: 'Roboto', serif;
-  text-align: center;
+  background-image: url('');
+  background-position: center top;
+  background-size: cover;
+  margin: 0;
 }
 
+.page-title {
+  text-align: center;
+  font-weight: 100;
+}
