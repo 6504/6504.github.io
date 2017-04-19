@@ -7,6 +7,8 @@ html, body {
   }
 
 body { 
+  background-image: url("/images/JagBot 6504 @ 2017 FRC - 078.JPG");
+  background-repeat: repeat-x;
   font-family: 'Roboto', serif;
 }
 
