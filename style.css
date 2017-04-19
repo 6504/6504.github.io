@@ -9,12 +9,12 @@ html, body {
 body { 
   background-image: url("/images/JagBot 6504 @ 2017 FRC - 078.JPG");
   background-repeat: repeat-x;
-  color: white;
   font-family: 'Roboto', serif;
 }
 
 .page-title {
   text-align: center;
   font-weight: 100;
+  color: white;
 }
 
