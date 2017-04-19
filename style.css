@@ -8,10 +8,6 @@ html, body {
 
 body { 
   font-family: 'Roboto', serif;
-  background-image: url('JagBot 6504 @ 2017 FRC - 078.JPG');
-  background-position: center top;
-  background-size: cover;
-  margin: 0;
 }
 
 .page-title {
