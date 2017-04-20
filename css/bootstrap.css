@@ -4277,6 +4277,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
+  color: White;
 }
 
 .navbar-brand > img {
@@ -4592,8 +4593,8 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse {
   color: #9d9d9d;
 }
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
+.navbar-inverse:hover,
+.navbar-inverse:focus {
   color: #fff;
   background-color: transparent;
 }
