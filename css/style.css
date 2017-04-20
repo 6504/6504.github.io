@@ -6,7 +6,11 @@
   text-align: center;
   margin: 55px;
 }
-.dropdown-toggle {
-   float: right;
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
 }
+
    
