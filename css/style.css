@@ -1,3 +1,8 @@
 .page-title {
    text-align: center;
 }
+
+.page-description {
+  text-align: center;
+  margin: 0;
+}
