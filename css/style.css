@@ -26,7 +26,8 @@ table {
 
 .jumbotron {
   background-image: url("/images/JagBot 6504 @ 2017 FRC - 078.JPG");
-  padding: 100px;
+  padding-top: 100px;
+  padding-bottom: 200px;
 }
 
 .sponsors {
