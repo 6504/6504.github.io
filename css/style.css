@@ -3,7 +3,8 @@ html, body {
 }
 
 table {
-    margin: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 .page-title {
@@ -29,8 +30,8 @@ table {
 }
 
 .sponsors {
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin: 0 auto;
 }
 
    
