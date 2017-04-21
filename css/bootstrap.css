@@ -55,6 +55,13 @@ abbr[title] {
 b,
 strong {
   font-weight: bold;
+},
+bannerimage {
+  width: 100%;
+  background-image: url("/images/JagBot 6504 @ 2017 FRC - 078.JPG");
+  height: 405px;
+  background-color: purple;
+  background-position: center;
 }
 dfn {
   font-style: italic;
@@ -4980,7 +4987,7 @@ a.badge:focus {
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
+    padding-top: 100px;
     padding-bottom: 150px;
   }
   .container .jumbotron,
