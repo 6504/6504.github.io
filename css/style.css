@@ -2,11 +2,6 @@ html, body {
     width: 100%;
 }
 
-table {
-  display: block;
-  margin: 0 auto;
-}
-
 .page-title {
    color: White;
    text-align: center;
