@@ -39,6 +39,6 @@ html, body {
    margin-right: auto;
 }
 
-td:nth-child(2) {
+td:nth-child(3) {
     padding-right: 20px;
 }
