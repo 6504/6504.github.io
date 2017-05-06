@@ -31,8 +31,8 @@ html, body {
 }
 
 .centered {
-    display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .centered-sponsors {
