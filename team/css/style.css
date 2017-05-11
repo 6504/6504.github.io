@@ -1,0 +1,45 @@
+html, body {
+    width: 100%;
+}
+
+.page-title {
+   color: White;
+   text-align: center;
+}
+
+.page-description {
+  color: White;
+  text-align: center;
+  margin: 55px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-image: url("/images/JagBot 6504 @ 2017 FRC - 078.JPG");
+  padding-top: 100px;
+  padding-bottom: 200px;
+  text-align: center;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.centered {
+   text-align: center;
+}
+
+.centered-sponsors {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+td:nth-child(3) {
+    padding-right: 20px;
+}
