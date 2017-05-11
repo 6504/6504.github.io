@@ -40,6 +40,6 @@ html, body {
    text-align: center;
 }
 
-td:nth-child(3) {
+td:nth-child(2) {
     padding-right: 20px;
 }
