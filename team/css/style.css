@@ -26,12 +26,14 @@ html, body {
   text-align: center;
 }
 
-.sponsors {
+/* .sponsors {
     text-align: center;
-}
+} */
 
-.centered {
-   text-align: center;
+.centered-content {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
 }
 
 .centered-sponsors {
