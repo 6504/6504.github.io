@@ -2,6 +2,9 @@ html, body {
     width: 100%;
 }
 
+img { 
+    max-width: 100%;
+}
 .page-title {
    color: White;
    text-align: center;
