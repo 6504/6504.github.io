@@ -32,6 +32,10 @@ html, body {
     text-align: center;
 }
 
+.sponsors {
+    text-align: center;
+}
+
 .centered-sponsors {
    margin-left: auto;
    margin-right: auto;
