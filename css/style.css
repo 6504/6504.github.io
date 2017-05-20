@@ -28,8 +28,9 @@ img {
 
 .jumbotron {
   background-image: url("/images/20170421_1646551.jpg");
-  padding-top: 100px;
-  padding-bottom: 100px;
+  height: 700px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   text-align: center;
 }
 
@@ -46,3 +47,4 @@ img {
 td:nth-child(2) {
     padding-right: 20px;
 }
+
