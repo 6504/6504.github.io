@@ -18,6 +18,7 @@ img {
   color: White;
   text-align: center;
   margin: 55px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .theme-dropdown .dropdown-menu {
