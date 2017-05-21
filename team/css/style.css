@@ -20,7 +20,7 @@ html, body {
 }
 
 .jumbotron {
-  background-image: url("/images/teamphoto.JPG");
+  background-image: url("/images/teamphoto.jpg");
   padding-top: 100px;
   padding-bottom: 200px;
   text-align: center;
