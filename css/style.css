@@ -8,6 +8,16 @@
          url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'); /* Legacy iOS */
 }
 
+@font-face {
+    font-family: 'Mohave';
+    src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
 html, body {
     width: 100%;
 }
@@ -46,7 +56,12 @@ img {
   text-align: center;
 }
 
+.spacer {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
 .sponsors {
+    font-family: 'Mohave', 'Roboto', sans-serif;
     text-align: center;
 }
 
