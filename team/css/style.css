@@ -105,3 +105,7 @@ td:nth-child(3) {
 .caption {
     font-family: 'Roboto', sans-serif;
 }
+
+.quote {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
