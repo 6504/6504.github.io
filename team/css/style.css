@@ -40,6 +40,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
 .page-title {
    color: White;
    text-align: center;
