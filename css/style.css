@@ -34,6 +34,14 @@ a {
     font-family: 'Mohave', 'Roboto', sans-serif;
 }
 
+.competition {
+    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
+.description {
+    font-family: 'Roboto', sans-serif;
+}
+
 .page-title {
    color: White;
    text-align: center;
