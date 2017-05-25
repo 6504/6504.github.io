@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Mohave-Bold';
+    src: url('/Mohave-Typefaces/Mohave-Bold.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave-Bold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-Bold.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Mohave-SemiBold';
+    src: url('/Mohave-Typefaces/Mohave-SemiBold.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave-SemiBold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-SemiBold.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'); /* Legacy iOS */
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    margin: auto;
+}
+
+img { 
+    max-width: 100%;
+}
+
+a {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
+.page-title {
+   color: White;
+   text-align: center;
+   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
+.page-description {
+  color: White;
+  text-align: center;
+  margin: 55px;
+  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.jumbotron {
+  background-image: url("/team/images/other-pic.jpg");
+  padding-top: 150px;
+  padding-bottom: 150px;
+  height: 700px;
+  text-align: center;
+ /* display:block;
+  margin-left:auto;
+  margin-right:auto; */
+}
+
+.centered-content {
+    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.centered-sponsors {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+td:nth-child(3) {
+    padding-right: 20px;
+}
+
+.presheading {
+    padding-top: 50px;
+}
+
+.name { 
+    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
+.occupation {
+    font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
+}
+
+.caption {
+    font-family: 'Roboto', sans-serif;
+}
+
+.quote {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
