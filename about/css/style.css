@@ -128,20 +128,7 @@ h1, h2, h3 {
   padding: 1em;
 }
 
-.timeline {
-  position: relative;
-  overflow: auto;
-  
-  &:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 5px;
-    background: $gray;
-    left: 0;
-  }
-  
-  h2 {
+h2 {
     background: $gray;
     max-width: 6em;
     margin: 0 auto 1em;
@@ -150,8 +137,8 @@ h1, h2, h3 {
     position: relative;
     clear: both;
   }
-  
-  ul {
+
+ ul {
     list-style: none;
     padding: 0 0 0 1em;
     z-index: 1;
@@ -162,7 +149,22 @@ h1, h2, h3 {
     padding: 1em;
     margin-bottom: 1em;
     position: relative;
-    
+}
+
+.timeline {
+  position: relative;
+  overflow: auto;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 5px;
+    background: $gray;
+    left: 0;
+  }
+  
+ 
     &:before {
       content: '';
       width: 0;
@@ -189,13 +191,7 @@ h1, h2, h3 {
     max-width: 1000px;
     margin: 0 auto;
   }
-  
-  .timeline {
-    &:before {
-      left: 50%;
-    }
-    
-    ul {
+  ul {
       padding-left: 0;
       max-width: 700px;
       margin: 0 auto;
@@ -212,7 +208,13 @@ h1, h2, h3 {
     
     li:nth-child(odd) {
       float: left;
-      
+    }
+    
+  .timeline {
+    &:before {
+      left: 50%;
+    }
+    
       &:before {
         border-top: 1em solid $gray;
         border-right: 1em solid transparent;
