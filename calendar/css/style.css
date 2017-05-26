@@ -30,6 +30,10 @@ img {
     max-width: 100%;
 }
 
+a {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
 .page-title {
    color: White;
    text-align: center;
@@ -54,7 +58,12 @@ img {
   text-align: center;
 }
 
+.spacer {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
 .sponsors {
+    font-family: 'Mohave', 'Roboto', sans-serif;
     text-align: center;
 }
 
