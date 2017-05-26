@@ -179,9 +179,9 @@ h1, h2, h3 {
 }
 
 @media screen and (min-width: 40em) {
-  .container {
+ /* .container {
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto; */
   }
 
   .timeline:before {
