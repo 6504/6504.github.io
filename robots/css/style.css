@@ -1,3 +1,23 @@
+@font-face {
+    font-family: 'Mohave-Bold';
+    src: url('/Mohave-Typefaces/Mohave-Bold.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave-Bold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave-Bold.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave-Bold.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Mohave';
+    src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+    src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+         url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+         url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
 html, body {
     width: 100%;
 }
@@ -8,6 +28,10 @@ body {
 
 img {
     max-width: 100%;
+}
+
+a {
+    font-family: 'Mohave', 'Roboto', sans-serif;
 }
 
 .page-title {
