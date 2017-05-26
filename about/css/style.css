@@ -81,7 +81,12 @@ a {
     text-align: center;
 }
 
+.spacer {
+    font-family: 'Mohave', 'Roboto', sans-serif;
+}
+
 .sponsors {
+    font-family: 'Mohave', 'Roboto', sans-serif;
     text-align: center;
 }
 
