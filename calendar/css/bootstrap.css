@@ -4962,6 +4962,11 @@ a.badge:focus {
   margin-bottom: 30px;
   color: #fff;
   background-color: #eee;
+  background-image:url('http://www.interviewmagazine.com/files/2013/06/10/img-banks_140906256405.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 }
 .jumbotron h1,
 .jumbotron .h1 {
