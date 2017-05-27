@@ -84,6 +84,11 @@ a {
    text-align: center;
 }
 
+.centered-content {
+  padding-top: 50px;
+  text-align: center;
+}
+
 td:nth-child(2) {
     padding-right: 20px;
 }
