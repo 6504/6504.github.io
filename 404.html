@@ -1,0 +1,56 @@
+<html>
+<style>
+	@-webkit-keyframes rotate {
+	  from {
+		-webkit-transform: rotate(0deg);
+	  }
+	  to { 
+		-webkit-transform: rotate(360deg);
+	  }
+	}
+
+	.rafael
+	{
+		-webkit-animation-name:             rotate; 
+		-webkit-animation-duration:         4s; 
+		-webkit-animation-iteration-count:  infinite;
+
+	}
+
+#rainbow {
+		background: red; /* not working, let's see some red */
+		background: -moz-linear-gradient( top ,
+			rgba(255, 0, 0, 1) 0%,
+			rgba(255, 255, 0, 1) 15%,
+			rgba(0, 255, 0, 1) 30%,
+			rgba(0, 255, 255, 1) 50%,
+			rgba(0, 0, 255, 1) 65%,
+			rgba(255, 0, 255, 1) 80%,
+			rgba(255, 0, 0, 1) 100%);
+		background: -webkit-gradient(linear,  left top,  left bottom, 
+			color-stop(0%, rgba(255, 0, 0, 1)), 
+			color-stop(15%, rgba(255, 255, 0, 1)),
+			color-stop(30%, rgba(0, 255, 0, 1)),
+			color-stop(50%, rgba(0, 255, 255, 1)),
+			color-stop(65%, rgba(0, 0, 255, 1)),
+			color-stop(80%, rgba(255, 0, 255, 1)),
+			color-stop(100%, rgba(255, 0, 0, 1)));
+	}
+</style>
+
+
+</head>
+<body id="rainbow">
+	<body>
+		<img src="https://vignette1.wikia.nocookie.net/mlg-frag/images/0/0f/Epic_sax_guy.gif/revision/latest?cb=20141124020151">
+		<p><a href="team/index.html">Back to home page</a></p>
+
+		<audio autoplay loop="infinite">
+			<source src="/images/nicememe.mp3" type="audio/mpeg">
+		</audio>
+
+		<iframe width="0" height="0" src="https://www.youtube.com/embed/kxopViU98Xo" frameborder="0" allowfullscreen></iframe>
+
+		<p style="font-size:300%;" class="rafael"><i>Quoth the server,</i> <strong><i>"404"</i></strong></p>
+	</body>
+</html>
