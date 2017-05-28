@@ -85,6 +85,10 @@ a {
     text-align: center;
 }
 
+.centered-content a {
+    color: black;
+}
+
 .centered-sponsors {
    margin-left: auto;
    margin-right: auto;
