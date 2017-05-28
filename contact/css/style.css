@@ -78,6 +78,13 @@ a {
     text-align: center;
 }
 
+.centered-content {
+    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
 .centered-sponsors {
    margin-left: auto;
    margin-right: auto;
