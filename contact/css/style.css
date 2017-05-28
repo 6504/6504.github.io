@@ -81,6 +81,7 @@ a {
 .links {
     font-family: 'Mohave', 'Roboto', sans-serif;
     text-align: center;
+    padding-top: 10px;
 }
 
 .links a {
