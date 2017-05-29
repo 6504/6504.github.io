@@ -89,6 +89,7 @@ a {
 }
 
 .centered-content {
+  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
   padding-top: 50px;
   text-align: center;
 }
