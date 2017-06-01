@@ -34,15 +34,15 @@ a {
     font-family: 'Mohave', 'Roboto', sans-serif;
 }
 
-/* .competition {
+.directions {
     font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
 .description {
     font-family: 'Roboto', sans-serif;
-} */
+} 
 
-/* .page-title {
+.page-title {
    color: White;
    text-align: center;
    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
@@ -53,7 +53,7 @@ a {
   text-align: center;
   margin: 55px;
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
-} */
+} 
 
 .theme-dropdown .dropdown-menu {
   position: static;
@@ -61,7 +61,7 @@ a {
   margin-bottom: 20px;
 }
 
-/* .jumbotron {
+ .jumbotron {
   background-image: url("/images/20170421_1646551.jpg");
   height: 700px;
   padding-top: 150px;
@@ -69,7 +69,7 @@ a {
   text-align: center;
 } 
 
-.spacer {
+/* .spacer {
     font-family: 'Mohave', 'Roboto', sans-serif;
 } */
 
