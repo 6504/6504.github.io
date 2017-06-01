@@ -78,8 +78,8 @@ a {
     text-align: center;
 }
 
-.spacer {
-    font-family: 'Mohave', 'Roboto', sans-serif;
+.space {
+    padding-top: 25px;
 }
 
 .sponsors {
