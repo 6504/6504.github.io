@@ -65,6 +65,10 @@ a {
     text-align: right;
 }
 
+.competition {
+    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
 .spacer {
     font-family: 'Mohave', 'Roboto', sans-serif;
 }
