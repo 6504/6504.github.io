@@ -24,7 +24,6 @@ html, body {
 
 body {
     padding-top: 50px;
-    padding-bottom: 20px;
     margin: auto;
 }
 
@@ -47,6 +46,7 @@ a {
 .page-title {
    color: White;
    text-align: center;
+   padding-bottom: 50px; 
    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
@@ -63,8 +63,13 @@ a {
 }
 
 .jumbotron {
+<<<<<<< HEAD
   background-image: url("/images/20170421_1646551.svg");
   height: 700px;
+=======
+  background-image: url("/images/20170421_1646551.jpg");
+  height: 800px;
+>>>>>>> origin/master
   text-align: center;
   text-align: center;
   background-position: center center;
