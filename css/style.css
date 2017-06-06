@@ -63,14 +63,8 @@ a {
 }
 
 .jumbotron {
-<<<<<<< HEAD
   background-image: url("/images/20170421_1646551.svg");
-  height: 700px;
-=======
-  background-image: url("/images/20170421_1646551.jpg");
   height: 800px;
->>>>>>> origin/master
-  text-align: center;
   text-align: center;
   background-position: center center;
   width: 100%;
