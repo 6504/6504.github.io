@@ -33,6 +33,7 @@ html, body {
 }
 
 body {
+    padding-top: 50px;
     margin: auto;
 }
 
@@ -53,13 +54,13 @@ a:hover {
 .page-title {
    color: White;
    text-align: center;
+   padding-bottom: 50px;
    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
 .page-description {
   color: White;
   text-align: center;
-  margin: 55px;
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
@@ -71,13 +72,14 @@ a:hover {
 
 .jumbotron {
   background-image: url("/team/images/other-pic.jpg");
-  padding-top: 150px;
-  padding-bottom: 150px;
-  height: 700px;
+  height: 800px;
   text-align: center;
- /* display:block;
-  margin-left:auto;
-  margin-right:auto; */
+  background-position: center center;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover
 }
 
 .centered-content {
