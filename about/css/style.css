@@ -33,6 +33,7 @@ html, body {
 }
 
 body {
+    padding-top: 50px;
     margin: auto;
 }
 
@@ -47,13 +48,13 @@ a {
 .page-title {
    color: White;
    text-align: center;
+   padding-bottom: 50px;
    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
 .page-description {
   color: White;
   text-align: center;
-  margin: 55px;
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
@@ -65,10 +66,14 @@ a {
 
 .jumbotron {
   background-image: url("/about/images/JagBot 6504 @ 2017 FRC - 078.JPG");
-  padding-top: 150px;
-  padding-bottom: 150px;
+  height: 800px;
   text-align: center;
-  height: 700px;
+  background-position: center center;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .centered-content {
