@@ -64,6 +64,10 @@ a {
 
 .spacer {
     font-family: 'Mohave', 'Roboto', sans-serif;
+    background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+    background-image: linear-gradient(to bottom,#3c3c3c,#222 100%);
 }
 
 .sponsors {
@@ -71,6 +75,13 @@ a {
     text-align: center;
 }
 
+.footer {
+    background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
+    background-image: linear-gradient(to bottom,#2d2d2d 0,#151515 100%);
+}
+ 
 .links {
     font-family: 'Mohave', 'Roboto', sans-serif;
 }
