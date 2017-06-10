@@ -23,6 +23,7 @@ html, body {
 }
 
 body {
+    padding-top: 50px;
     margin: auto;
 }
 
@@ -95,7 +96,6 @@ a {
     margin-left:auto;
     margin-right:auto;
     text-align: center;
-    padding-top: 50px;
 }
 
 .centered-sponsors {
