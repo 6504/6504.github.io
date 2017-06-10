@@ -23,6 +23,7 @@ html, body {
 }
 
 body {
+    padding-top: 50px;
     margin: auto;
 }
 
@@ -42,7 +43,6 @@ a {
 .page-description {
   color: White;
   text-align: center;
-  margin: 55px;
 }
 
 .theme-dropdown .dropdown-menu {
