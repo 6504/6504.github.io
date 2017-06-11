@@ -124,12 +124,61 @@
 	    </div>
 
  <hr>
+<table class="table table-striped table-bordered">
+   <thead>
+	<tr>
+		<div class="competition">
+		<th>Team</th>
+		</div>
+
+		<div class="competition">
+		<th>Robot Name(s)</th>
+		</div>
+	</tr>
+    </thead>
+
+    <tbody>
+	<tr>
+	  <td>9822F</td>
+	   <td><i>Unnamed</i></td>
+  <button class = "btn" onclick="openCity('Unnamed')">London</button>
+	</tr>
+		
+	<tr>
+		<td>9822T</td>
+		<td><i>Tankbot</i></td>
+  		<button class = "btn" onclick="openCity('Tankbot')">Paris</button>
+	</tr>
+	  </tbody>
+	 </table>
+</div>
+
+<div id="Unnamed" class="w3-container city">
+  <h2>Unnamed</h2>
+  <img src ="/robots/skyrise/images/image1.jpg"><br /><img src ="/robots/skyrise/images/image2.jpg"></li>
+</div>
+
+<div id="Tankbot" class="w3-container city" style="display:none">
+  <h2>Tankbot</h2>
+  <img src ="/robots/skyrise/images/image3.jpg"></li>
+</div>
+
+
+<script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+}
+</script>
 
 	<div class="row">
 	 <div class="col-md-4">
-	  <table class="table table-striped table-bordered">
-	   <thead>
-	   <tr>
+	  
+
 		<div class="competition">
 		<th>Team</th>
 		</div>
@@ -142,22 +191,17 @@
 		<tr>
 		<td>9822F</td>
 		<td><i>Unnamed</i></td>
-			<td><button class = "btn" onclick="teamShow('a')">View Pictures</button></td>
+			<td><button class = "btn" onclick="openImage('a')">View Pictures</button></td>
 		</tr>
 		<tr>
 		<td>9822T</td>
 		<td><i>Tankbot</i></td>
-			<td><button class = "btn" onclick="teamShow('b')">View Pictures</button></td>
+			<td><button class = "btn" onclick="openImage('b')">View Pictures</button></td>
 		</tr>
 	  </tbody>
 	 </table>
 	</div>
 
-<div class="col-md-8">
-	<ul>
-	<img src ="/robots/skyrise/images/image1.jpg"><br /><img src ="/robots/skyrise/images/image2.jpg"></li>
-	<img src ="/robots/skyrise/images/image3.jpg"></li>
-	</ul>
 </div>
 </div>
 </div>
