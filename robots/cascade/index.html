@@ -85,7 +85,6 @@
               <ul class="dropdown-menu">
                 <li><a href="../../index.html">Contact</a></li>
                 <li><a href="../../calendar/index.html">Calendar</a></li>
-                <li><a href="../outreach/index.html">Outreach</a></li>
                 
 		<!-- Link spaces that could be needed
 		<li><a href="#">Something else here</a></li>
@@ -123,46 +122,68 @@
             </div>
 	    </div>
 
+ 
  <hr>
-
-	<div class="row">
-	 <div class="col-md-4">
-	  <table class="table table-striped table-bordered">
-	   <thead>
-	   <tr>
-		<div class="competition">
+  	<div class="row" style="padding-bottom: 80px">
+  <div class="col-md-6">
+<div class="competition">
+		</div><div class="competition">
+		</div><button class="btn" onclick="openCity('Unnamed')">9822F</button><button class="btn" onclick="openCity('Tankbot')">9822T</button><table class="table table-striped table-bordered">
+   <thead>
+	<tr>
 		<th>Team</th>
-		</div>
-		<div class="competition">
+		
+
 		<th>Robot Name(s)</th>
-		</div>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>9822F</td>
-		<td><i>Unnamed</i></td>
-			<td><button class = "btn" onclick="teamShow('a')">View Pictures</button></td>
-		</tr>
-		<tr>
+		
+	</tr>
+    </thead>
+
+    <tbody>
+	<tr>
+	  <td>9822F</td>
+	   <td><i>Unnamed</i></td>
+  
+	</tr>
+		
+	<tr>
 		<td>9822T</td>
 		<td><i>Tankbot</i></td>
-			<td><button class = "btn" onclick="teamShow('b')">View Pictures</button></td>
-		</tr>
+  		
+	</tr>
 	  </tbody>
 	 </table>
-	</div>
+  </div>
 
-<div class="col-md-8">
-	<ul>
-	<img src ="/robots/skyrise/images/image1.jpg"><br /><img src ="/robots/skyrise/images/image2.jpg"></li>
-	<img src ="/robots/skyrise/images/image3.jpg"></li>
-	</ul>
+
+<script>
+function openCity(cityName) {
+    var i;
+    var x = document.getElementsByClassName("city");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    document.getElementById(cityName).style.display = "block";  
+}
+</script>
+
+	 
+	  
+  <div class="col-md-6">
+	  
+<div id="Unnamed" class="w3-container city" style="display: block;">
+  <h2>Unnamed</h2>
+  <img src="/robots/skyrise/images/image1.jpg"><br><img src="/robots/skyrise/images/image2.jpg">
 </div>
+
+<div id="Tankbot" class="w3-container city" style="display: none;">
+  <h2>Tankbot</h2>
+  <img src="/robots/skyrise/images/image3.jpg">
 </div>
-</div>
-</div> <!-- /container -->
-s
+</div></div>
+	
+
+</div><!-- Body Close-->
 
 			<!-- Footer Content -->
 	<div class="spacer">
