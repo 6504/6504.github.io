@@ -123,18 +123,42 @@
 	    </div>
 
  <hr>
-<div class="w3-bar w3-black">
-  <button class="w3-bar-item w3-button" onclick="openCity('London')">London</button>
-  <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</button>
+<table class="table table-striped table-bordered">
+   <thead>
+	<tr>
+		<div class="competition">
+		<th>Team</th>
+		</div>
+
+		<div class="competition">
+		<th>Robot Name(s)</th>
+		</div>
+	</tr>
+    </thead>
+
+    <tbody>
+	<tr>
+	  <td>9822F</td>
+	   <td><i>Unnamed</i></td>
+  <button class = "btn" onclick="openCity('Unnamed')">London</button>
+	</tr>
+		
+	<tr>
+		<td>9822T</td>
+		<td><i>Tankbot</i></td>
+  		<button class = "btn" onclick="openCity('Tankbot')">Paris</button>
+	</tr>
+	  </tbody>
+	 </table>
 </div>
 
-<div id="London" class="w3-container city">
-  <h2>London</h2>
+<div id="Unnamed" class="w3-container city">
+  <h2>Unnamed</h2>
   <img src ="/robots/skyrise/images/image1.jpg"><br /><img src ="/robots/skyrise/images/image2.jpg"></li>
 </div>
 
-<div id="Paris" class="w3-container city" style="display:none">
-  <h2>Paris</h2>
+<div id="Tankbot" class="w3-container city" style="display:none">
+  <h2>Tankbot</h2>
   <img src ="/robots/skyrise/images/image3.jpg"></li>
 </div>
 
@@ -153,8 +177,7 @@ function openCity(cityName) {
 	<div class="row">
 	 <div class="col-md-4">
 	  
-	   <thead>
-	   <tr>
+
 		<div class="competition">
 		<th>Team</th>
 		</div>
