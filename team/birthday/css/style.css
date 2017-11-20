@@ -9,6 +9,7 @@ body {
   background: #E5E5E5;
   background-image: url("/gray-floral.png");
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 #card-front {
