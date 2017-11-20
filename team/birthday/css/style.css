@@ -8,7 +8,7 @@
 body {
   background: #E5E5E5;
   background-image: url("/gray-floral.png");
-  padding: 50px;
+  padding-top: 50px;
 }
 
 #card-front {
@@ -20,7 +20,7 @@ body {
 }
 
 .wrap {
-    padding: 1.5em 2.5em;
+    padding: 1.5em;
     height: 100%;
 }
 #card-front, #card-inside {
@@ -192,7 +192,25 @@ footer {
     font-size: 2.4vh;
   }
 
+  p.signed {
+    font-size: 3.5vh;
+  }
+
   #card, #card-front, #card-inside {
     height: 45vw;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+   #card h1 {
+    font-size: 4.5vh;
+  }
+
+  p {
+    font-size: 2.1vh;
+  }
+
+  p.signed {
+    font-size: 3.5vh;
   }
 }
