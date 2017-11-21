@@ -186,32 +186,32 @@ footer {
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
   #card, #card-front, #card-inside {
-    height: 70vh;
+    height: 130vw;
   }
-  #card h1 {
-   font-size: 4.5vh;
- }
+   #card h1 {
+    font-size: 4.5vh;
+  }
 
- p {
-   font-size: 2.1vh;
- }
+  p {
+    font-size: 1.4vh;
+  }
 
- p.signed {
-   font-size: 3.5vh;
- }
+  p.signed {
+    font-size: 2.6vh;
+  }
 }
 
 @media only screen and (max-width: 767px) and (orientation: landscape) {
    #card h1 {
-    font-size: 9vw;
+    font-size: 9vh;
   }
 
   p {
-    font-size: 1.9vw;
+    font-size: 2.3vh;
   }
 
   p.signed {
-    font-size: 3.5vw;
+    font-size: 3.5vh;
   }
 
   #card, #card-front, #card-inside {
