@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Mohave';
+  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Mohave-Bold';
   src: url('/Mohave-Typefaces/Mohave-Bold.otf'); /* IE9 Compat Modes */
   src: url('/Mohave-Typefaces/Mohave-Bold.otf?#iefix') format('opentype'), /* IE6-IE8 */
@@ -9,13 +19,13 @@
 }
 
 @font-face {
-  font-family: 'Mohave';
-  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
-  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+  font-family: 'Mohave-SemiBold';
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'); /* Legacy iOS */
 }
 
 html, body {
@@ -40,28 +50,29 @@ td:nth-child(3) {
 }
 
 .centered-content {
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
 }
 
 .footer {
-  background-image: linear-gradient(to bottom,#2d2d2d 0,#151515 100%);
-  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
-  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -webkit-linear-gradient(top,#3e3e3e 0,#060606 100%);
+  background-image: -o-linear-gradient(top,#3e3e3e 0,#060606 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3e3e3e),to(#060606));
+  background-image: linear-gradient(to bottom,#3e3e3e 0,#060606 100%);
 }
 
 .footer-text {
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
   text-align: center;
 }
 
 .jumbotron {
-  background-image: url("/about/images/JagBot 6504 @ 2017 FRC - 078.JPG");
+  background-image: url("/about/images/6504 @ FRC 2017 - CarryRobot.jpg");
   background-position: center center;
   background-size: cover;
   height: 800px;
+  margin-bottom: 20px;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -82,26 +93,18 @@ td:nth-child(3) {
   text-align: center;
 }
 
-.presheading {
-  padding-top: 50px;
-}
-
 .theme-dropdown .dropdown-menu {
   display: block;
   margin-bottom: 20px;
   position: static;
 }
 
-.space {
-  padding-top: 25px;
-}
-
 .spacer {
-  background-image: linear-gradient(to bottom,#3c3c3c,#222 100%);
-  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
-  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  background-image: linear-gradient(to bottom,#505050,#252525 100%);
+  background-image: -o-linear-gradient(top,#505050 0,#252525 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#505050),to(#252525));
+  background-image: -webkit-linear-gradient(top,#505050 0,#252525 100%);
+  margin-top: 20px;
 }
 
 /* Timeline CSS */
@@ -114,6 +117,8 @@ h1, h2, h3 {
 } */
 
 .timeline {
+  margin-bottom: 20px;
+  margin-top: 20px;
   position: relative;
   overflow: auto;
 }
