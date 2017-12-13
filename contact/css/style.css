@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Mohave';
+  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Mohave-Bold';
   src: url('/Mohave-Typefaces/Mohave-Bold.otf'); /* IE9 Compat Modes */
   src: url('/Mohave-Typefaces/Mohave-Bold.otf?#iefix') format('opentype'), /* IE6-IE8 */
@@ -9,13 +19,13 @@
 }
 
 @font-face {
-  font-family: 'Mohave';
-  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
-  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+  font-family: 'Mohave-SemiBold';
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'); /* Legacy iOS */
 }
 
 html, body {
@@ -40,26 +50,40 @@ td:nth-child(2) {
 }
 
 .centered-content {
-  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+
+.content {
+  font-family: 'Mohave', 'Roboto', sans-serif;
   margin-left:auto;
   margin-right:auto;
   text-align: center;
 }
 
 .footer {
-  background-image: linear-gradient(to bottom,#2d2d2d 0,#151515 100%);
-  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
-  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
+  background-image: -webkit-linear-gradient(top,#3e3e3e 0,#060606 100%);
+  background-image: -o-linear-gradient(top,#3e3e3e 0,#060606 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#3e3e3e),to(#060606));
+  background-image: linear-gradient(to bottom,#3e3e3e 0,#060606 100%);
 }
 
 .footer-text {
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.general-header {
+  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
   text-align: center;
 }
 
 .google-maps {
   height: 0;
+  margin-top: 20px;
   overflow: hidden;
   padding-bottom: 75%; /* Aspect Ratio */
   position: relative;
@@ -102,12 +126,18 @@ td:nth-child(2) {
    font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 } */
 
+.section-header {
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+
 .spacer {
-  background-image: linear-gradient(to bottom,#3c3c3c,#222 100%);
-  background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
-  background-image: -webkit-linear-gradient(top,#3c3c3c 0,#222 100%);
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  background-image: linear-gradient(to bottom,#505050,#252525 100%);
+  background-image: -o-linear-gradient(top,#505050 0,#252525 100%);
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#505050),to(#252525));
+  background-image: -webkit-linear-gradient(top,#505050 0,#252525 100%);
 }
 
 .theme-dropdown .dropdown-menu {
