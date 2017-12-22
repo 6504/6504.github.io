@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Mohave';
+  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Mohave-SemiBold';
   src: url('/Mohave-Typefaces/Mohave-SemiBold.otf'); /* IE9 Compat Modes */
   src: url('/Mohave-Typefaces/Mohave-SemiBold.otf?#iefix') format('opentype'), /* IE6-IE8 */
@@ -86,6 +96,7 @@ td:nth-child(2) {
   background-image: -o-linear-gradient(top,#505050 0,#252525 100%);
   background-image: -webkit-gradient(linear,left top,left bottom,from(#505050),to(#252525));
   background-image: -webkit-linear-gradient(top,#505050 0,#252525 100%);
+  margin-top: 20px;
 }
 
 .theme-dropdown .dropdown-menu {

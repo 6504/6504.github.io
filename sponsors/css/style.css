@@ -98,7 +98,7 @@ td:nth-child(2) {
   background-image: -o-linear-gradient(top,#505050 0,#252525 100%);
   background-image: -webkit-gradient(linear,left top,left bottom,from(#505050),to(#252525));
   background-image: -webkit-linear-gradient(top,#505050 0,#252525 100%);
-  margin-top: 36px;
+  margin-top: 26px;
 }
 
 .sponsors {
