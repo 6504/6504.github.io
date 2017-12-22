@@ -1,4 +1,14 @@
 @font-face {
+  font-family: 'Mohave';
+  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+}
+
+@font-face {
   font-family: 'Mohave-Bold';
   src: url('/Mohave-Typefaces/Mohave-Bold.otf'); /* IE9 Compat Modes */
   src: url('/Mohave-Typefaces/Mohave-Bold.otf?#iefix') format('opentype'), /* IE6-IE8 */
@@ -9,13 +19,13 @@
 }
 
 @font-face {
-  font-family: 'Mohave';
-  src: url('/Mohave-Typefaces/Mohave.otf'); /* IE9 Compat Modes */
-  src: url('/Mohave-Typefaces/Mohave.otf?#iefix') format('opentype'), /* IE6-IE8 */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Super Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'), /* Pretty Modern Browsers */
-       url('/Mohave-Typefaces/Mohave.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('/Mohave-Typefaces/Mohave.otf') format('opentype'); /* Legacy iOS */
+  font-family: 'Mohave-SemiBold';
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf'); /* IE9 Compat Modes */
+  src: url('/Mohave-Typefaces/Mohave-SemiBold.otf?#iefix') format('opentype'), /* IE6-IE8 */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Super Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'), /* Pretty Modern Browsers */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('/Mohave-Typefaces/Mohave-SemiBold.otf') format('opentype'); /* Legacy iOS */
 }
 
 html, body {
@@ -57,7 +67,7 @@ td:nth-child(2) {
 }
 
 .footer-text {
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -95,7 +105,7 @@ td:nth-child(2) {
   background-image: -o-linear-gradient(top,#3c3c3c 0,#222 100%);
   background-image: -webkit-gradient(linear,left top,left bottom,from(#3c3c3c),to(#222));
   background-image: linear-gradient(to bottom,#3c3c3c,#222 100%);
-  font-family: 'Mohave', 'Roboto', sans-serif;
+  margin-top: 26px;
 }
 
 .theme-dropdown .dropdown-menu {

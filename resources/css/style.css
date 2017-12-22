@@ -56,13 +56,12 @@ td:nth-child(3) {
   text-align: center;
 }
 
-.datefooter-text {
-  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
-  text-align: center;
-}
-
 .description {
   font-family: 'Roboto', sans-serif;
+}
+
+.edition {
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
 }
 
 .footer {
@@ -70,6 +69,11 @@ td:nth-child(3) {
   background-image: -o-linear-gradient(top,#3e3e3e 0,#060606 100%);
   background-image: -webkit-gradient(linear,left top,left bottom,from(#3e3e3e),to(#060606));
   background-image: linear-gradient(to bottom,#3e3e3e 0,#060606 100%);
+}
+
+.footer-text {
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
+  text-align: center;
 }
 
 .general-header {
