@@ -93,6 +93,10 @@ td:nth-child(3) {
   width: 100%;
 }
 
+.name {
+  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
+}
+
 .page-description {
   color: White;
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
