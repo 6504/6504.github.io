@@ -130,7 +130,7 @@
       </div>
     </div>
 
-    <!-- Outreach Programs Columns -->
+    <!-- Outreach Programs Rows -->
     <div class="container">
 	    <div class="row">
         <div class="col-md-12">
@@ -144,6 +144,7 @@
 
       <!-- LEGO NXT Competition -->
 	    <div class="row featurette">
+        <!-- LEGO NXT Competition Title -->
         <div class="col-md-7">
           <div class="general-header">
             <h1>LEGO NXT Competition<!-- <span class="text-muted">It'll blow your mind.</span>--></h1>
@@ -152,14 +153,66 @@
             <p class="lead">Each year, we host a LEGO Mindstorms general-header. Anyone can compete, and each year is a different theme. This is helpful because many local schools around us do not have NXT robots, and this general-header lets people build and program their own robots, free of charge.</p>
           </div>
 	      </div>
-
         <!-- LEGO NXT Competition Video -->
         <div class="col-md-5">
-          <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8U7pc01uxvw" frameborder="0" allowfullscreen=""></iframe>
-          </div>
+          <!-- Carousel -->
+          <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel Area -->
+            <div class="carousel-inner" role="listbox">
+              <!-- First Slide -->
+              <div class="item active">
+                <div class="background" id="player">
+                </div>
+                <!-- <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Example headline.</h1>
+                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+                  </div>
+                </div> /container -->
+              </div>
+              <!-- Second Slide -->
+              <div class="item">
+                <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                  </div>
+                </div><!-- /container -->
+              </div>
+              <!-- Third Slide -->
+              <div class="item">
+                <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+                <div class="container">
+                  <div class="carousel-caption">
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                  </div>
+                </div><!-- /container -->
+              </div>
+            </div><!-- /carousel-inner -->
+            <!-- Left Carosel Button -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <!-- Right Carosel Button -->
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div><!-- /carousel -->
         </div>
-      </div>
+      </div><!-- /row -->
 
       <hr class="divider">
 
@@ -201,9 +254,9 @@
     </div> <!-- /container -->
 
     <!-- Social Media Footer -->
-	  <div class="spacer">
+	  <div class="spacer" style="margin-top:16px;">
 		  <div class="footer-text">
-			  <h3><strong>SOCIAL MEDIA</strong></h3>
+		    <h3>SOCIAL MEDIA</h3>
 	    </div>
       <!-- Social Media Logos -->
 	    <div class="centered-content">
@@ -211,38 +264,38 @@
           <a href="https://www.youtube.com/channel/UCaUavuYYP5VKBeXVnuQviUw"><img src="/outreach/images/youtube-icon.png" alt="YouTube"></a>
         </td>
 		    <td>
-          <a href="https://twitter.com/FIRST_FRC_6504"><img src="/outreach/images/Twitter-icon.png" alt="Twitter"></a>
+          <a href="https://twitter.com/FIRST_FRC_6504"><img src="/outreach/images/twitter-icon.png" alt="Twitter"></a>
         </td>
 		    <td>
-          <a href="https://github.com/6504"><img src="/outreach/images/Github.png" alt="GitHub"></a>
+          <a href="https://github.com/6504"><img src="/outreach/images/github-icon.png" alt="GitHub"></a>
         </td>
 		    <td>
           <a href="mailto:fallschurchhsrobotics@gmail.com"><img src="/outreach/images/email-icon.png" alt="Email"></a>
         </td>
 	    </div>
-	  </div>
+	  </div><!-- /spacer -->
 
     <!-- Sponsor Footer -->
     <footer class="footer">
 	    <div class="footer-text">
-		    <h3><strong>OUR WONDERFUL SPONSORS</strong></h3>
+		    <h3>OUR WONDERFUL SPONSORS</h3>
 	    </div>
       <!-- Sponsor Pictures -->
       <div class="centered-content">
         <td>
-          <a href="https://www.afcea.org/"><img src="/outreach/images/AFCEA-logo.png" alt="AFCEA"></a>
+          <a href="https://www.afcea.org/"><img src="/outreach/images/AFCEA-small.png" alt="AFCEA"></a>
         </td>
         <td>
-          <a href="https://www.andymark.com/"><img src="/outreach/images/andymark.png" alt="AndyMark"></a>
+          <a href="https://www.csra.com/"><img src="/outreach/images/CSRA-small.png" alt="CSRA"></a>
         </td>
 	      <td>
-          <img src="/outreach/images/GiTech.png" alt="GiTech">
+          <a href="https://www.dodstem.us/"><img src="/outreach/images/DoDSTEM-small.png" alt="DoDSTEM"></a>
         </td>
         <td>
-          <a href="https://www.nvcc.edu/systemic/"><img src="/outreach/images/SYS-Fuelincd00.png" alt="Systemic Solutions"></a>
+          <a href="https://www.leidos.com/"><img src="/outreach/images/Leidos-small.png" alt="Leidos"></a>
         </td>
 		    <td>
-          <a href="https://www.dodstem.us/"><img src="/outreach/images/DoDSTEM-logo-Revised-632x211.png" alt="DoDSTEM"></a>
+          <a href="https://www.nvcc.edu/systemic/"><img src="/outreach/images/SystemicSolutions-small.png" alt="Systemic Solutions"></a>
         </td>
       </div>
     </footer>
@@ -259,6 +312,9 @@
 
     <!-- jQuery -->
     <script src="/outreach/js/jquery-3.2.1.min.js"></script>
+
+    <!-- Carousel Timing -->
+    <script src="/outreach/js/carousel.js"></script>
 
   </body>
 </html>
