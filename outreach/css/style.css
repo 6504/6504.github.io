@@ -52,11 +52,12 @@ td:nth-child(2) {
 /* Carousel base class */
 .carousel {
   height: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
   z-index: 10;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Declare heights because of positioning of img element */
