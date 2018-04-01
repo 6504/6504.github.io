@@ -9,11 +9,11 @@ The website itself is hosted as a Github Page.
 ## Setup
 Download the .zip file from [Bootstrap's](https://getbootstrap.com/)Website, or `cd` into website directory and run:
 
-      `npm install`
+      npm install
       
    then:
    
-      `npm install bootstrap`
+      npm install bootstrap
 
 ## Authors
 * [Anhtuan Nguyen](https://github.com/atunafish) - Code, art, design
