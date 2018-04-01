@@ -7,7 +7,7 @@ The website itself is hosted as a Github Page.
 * [`bootstrap`](https://getbootstrap.com/) & [`npm`](https://npmjs.com)
 
 ## Setup
-Download the .zip file from [Bootstrap's](https://getbootstrap.com/)Website, or `cd` into website directory and run:
+Download the .zip file from [Bootstrap's](https://getbootstrap.com/) Website, or `cd` into website directory and run:
 
       npm install
       
