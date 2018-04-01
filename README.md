@@ -4,12 +4,15 @@ This repository contains the code used on [fallschurchrobotics.com](http://falls
 The website itself is hosted as a Github Page. 
 
 ## Dependencies
-* [`bootstrap`](https://getbootstrap.com/) & ['npm'](https://npmjs.com)
+* [`bootstrap`](https://getbootstrap.com/) & [`npm`](https://npmjs.com)
 
 ## Setup
 Download the .zip file from [Bootstrap's](https://getbootstrap.com/)Website, or `cd` into website directory and run:
+
       `npm install`
+      
    then:
+   
       `npm install bootstrap`
 
 ## Authors
