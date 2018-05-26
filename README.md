@@ -10,7 +10,7 @@ The website itself is hosted as a Github Page.
 * [`jQuery`](https://jquery.com/) & [`Popper.js`](https://popper.js.org/)
 
 ## Setup
-Download the .zip file from [Bootstrap's](https://getbootstrap.com/) Website, then drag-and-drop the .js and .css files where needed.  
+Download the .zip file from [Bootstrap's](https://getbootstrap.com/) Website, then extract and drag-and-drop the .js and .css files where needed.  
 
 ## Authors
 * [Anhtuan Nguyen](https://github.com/atunafish) - Code, art, design
