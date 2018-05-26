@@ -1,19 +1,16 @@
 # Team 6504's Website
 This repository contains the code used on [fallschurchrobotics.com](http://fallschurchrobotics.com/)
 
-The website itself is hosted as a Github Page. 
+The website itself is hosted as a Github Page.
 
 ## Dependencies
-* [`bootstrap`](https://getbootstrap.com/) & [`npm`](https://npmjs.com)
+* [`bootstrap`](https://getbootstrap.com/)
+
+**Optional Dependencies**
+* [`jQuery`](https://jquery.com/) & [`Popper.js`](https://popper.js.org/)
 
 ## Setup
-Download the .zip file from [Bootstrap's](https://getbootstrap.com/) Website, or `cd` into website directory and run:
-
-      npm install
-      
-   then:
-   
-      npm install bootstrap
+Download the .zip file from [Bootstrap's](https://getbootstrap.com/) Website, then drag-and-drop the .js and .css files where needed.  
 
 ## Authors
 * [Anhtuan Nguyen](https://github.com/atunafish) - Code, art, design
