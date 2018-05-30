@@ -1,30 +1,7 @@
 # Team 6504's Website
-This repository contains the code used on [fallschurchrobotics.com](http://fallschurchrobotics.com/)
+This repository contains the code hosted on [fallschurchrobotics.com](http://fallschurchrobotics.com/)
 
-The website itself is hosted as a Github Page; using several dependencies:
-
-## Dependencies
-* [Ruby](https://www.ruby-lang.org/en/)
-* `bundler` and [`jekyll`](https://jekyllrb.com):
-```
-  gem install bundler jekyll
-```
-or locally:
-```
-  gem install bundler jekyll --user
-```
-
-## Setup
-1. Download and install Ruby.
-2. Set up or clone a folder, then run:
-```
-  bundle install
-```
-3. Then, to start Jekyll, run:
-```
-  bundle exec jekyll serve  
-```
-4. View the output at `localhost:4000`
+The website itself is hosted as a Github Page, using Bootstrap.
 
 ## Authors
 * [Anhtuan Nguyen](https://github.com/atunafish) - Code, art, design
