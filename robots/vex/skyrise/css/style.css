@@ -37,6 +37,7 @@ a {
 }
 
 body {
+  padding-top: 50px;
   margin: auto;
 }
 
@@ -44,19 +45,22 @@ img {
   max-width: 100%;
 }
 
-td:nth-child(2) {
-  padding-right: 20px;
+li h3 {
+    margin-top: 0px;
 }
 
-.button {
-  text-align: right;
+tbody {
+  font-family: 'Mohave-SemiBold', 'Roboto', sans-serif;
+}
+
+thead {
+  font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
 .centered-content {
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
   margin-left:auto;
   margin-right:auto;
-  padding-top: 50px;
   text-align: center;
 }
 
@@ -67,7 +71,7 @@ td:nth-child(2) {
   text-align: center;
 }
 
-.competition {
+.general-header {
   font-family: 'Mohave-Bold', 'Roboto', sans-serif;
 }
 
