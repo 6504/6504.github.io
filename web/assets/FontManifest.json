@@ -1,0 +1,26 @@
+[
+  {
+    "family": "ConcertOne",
+    "fonts": [
+      {
+        "asset": "fonts/concertone-regular.ttf"
+      }
+    ]
+  },
+  {
+    "family": "Nunito",
+    "fonts": [
+      {
+        "asset": "fonts/Nunito-Regular.ttf"
+      },
+      {
+        "asset": "fonts/Nunito-Bold.ttf",
+        "weight": 700
+      },
+      {
+        "asset": "fonts/Nunito-Regular.ttf",
+        "weight": 100
+      }
+    ]
+  }
+]
