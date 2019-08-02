@@ -1,1 +1,0 @@
-{"isEntrypoint":true,"deps":["fchs_robotics|lib/pages/HomePage.dart","firebase|lib/firebase.dart","flutter_web|lib/material.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":true}
