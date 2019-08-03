@@ -1,4 +1,5 @@
 import 'package:fchs_robotics/utilities/Defaults.dart';
+import 'dart:html';
 import 'package:flutter_web/material.dart';
 
 class NavBar extends StatefulWidget {
@@ -46,7 +47,11 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
           width: MediaQuery.of(context).size.width,
           height: 55.0,
           decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Colors.green),
-          child: Text("Navbar here", style: widget._navBarStyle,),
+          child: Row(
+            children: <Widget>[
+
+            ],
+          ),
         ),
         Align(
           alignment: Alignment.topCenter,
