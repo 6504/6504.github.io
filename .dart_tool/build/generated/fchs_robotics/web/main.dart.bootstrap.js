@@ -64,6 +64,7 @@ let modulePaths = {
  "packages/fchs_robotics/main": "packages/fchs_robotics/main.ddc",
  "packages/fchs_robotics/pages/HomePage": "packages/fchs_robotics/pages/HomePage.ddc",
  "packages/fchs_robotics/utilities/Defaults": "packages/fchs_robotics/utilities/Defaults.ddc",
+ "packages/fchs_robotics/utilities/Firebase": "packages/fchs_robotics/utilities/Firebase.ddc",
  "packages/firebase/firebase": "packages/firebase/firebase.ddc",
  "packages/firebase/src/app": "packages/firebase/src/app.ddc",
  "packages/flutter_web/animation": "packages/flutter_web/animation.ddc",
