@@ -1,10 +1,11 @@
+import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
 import 'package:flutter_web/material.dart';
 
 class NavBar extends StatefulWidget {
 
-  final TextStyle _navBarStyle = getTextStyle().copyWith(color: Colors.white);
+  final TextStyle _navBarStyle = getTextStyle().copyWith(color: Colors.white, fontWeight: FontWeight.w100, fontSize: 25.0);
   TextStyle _coreStyle;
 
   @override
@@ -49,7 +50,54 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
           decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Colors.green),
           child: Row(
             children: <Widget>[
-
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("HOME", style: widget._navBarStyle,),
+              ),
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("ABOUT US", style: widget._navBarStyle,),
+              ),
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("TEAM", style: widget._navBarStyle,),
+              ),
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("ROBOTS", style: widget._navBarStyle,),
+              ),
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("SPONSORS", style: widget._navBarStyle,),
+              ),
+              MaterialButton(
+                onPressed: () => {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return HomePage();
+                  }))
+                },
+                child: Text("MORE", style: widget._navBarStyle,),
+              ),
             ],
           ),
         ),
@@ -60,7 +108,7 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
             width: MediaQuery.of(context).size.width*0.1,
             height: MediaQuery.of(context).size.height*0.13,
             decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Colors.green),
-            child: Text("Navbar here", style: widget._navBarStyle,),
+            child: Image.network('assets/images/main_logo.png'),
           ),
         )
       ],
