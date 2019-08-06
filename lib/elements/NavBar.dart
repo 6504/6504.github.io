@@ -24,7 +24,7 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
       children: <Widget>[
         Container(
           width: MediaQuery.of(context).size.width,
-          height: 100.0,
+          height: 110.0,
           decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Color.fromRGBO(8, 87, 33, 1.0)),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -46,9 +46,10 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
         ),
         Container(
           width: MediaQuery.of(context).size.width,
-          height: 55.0,
+          height: 65.0,
           decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Colors.green),
-          child: Row(
+          child: ButtonBar(
+            alignment: MainAxisAlignment.center,
             children: <Widget>[
               MaterialButton(
                 onPressed: () => {
@@ -74,6 +75,7 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
                 },
                 child: Text("TEAM", style: widget._navBarStyle,),
               ),
+              Padding(padding: EdgeInsets.symmetric(horizontal: 130.0)),
               MaterialButton(
                 onPressed: () => {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {
