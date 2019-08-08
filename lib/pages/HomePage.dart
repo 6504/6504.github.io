@@ -10,6 +10,15 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.white10,
       body: Stack(
         children: <Widget>[
+          ListView(
+            children: <Widget>[
+              Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height*0.8,
+                decoration: BoxDecoration(image: DecorationImage(image: AssetImage('images/team.jpg'), alignment: Alignment.center, fit: BoxFit.cover)),
+              )
+            ],
+          ),
           NavBar(),
         ],
       )
