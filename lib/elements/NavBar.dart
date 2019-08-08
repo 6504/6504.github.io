@@ -69,12 +69,12 @@ class LargeNavBarElement extends StatelessWidget {
           color: Colors.white
         ),
         MaterialButton(
-          onPressed: () => {},
+          onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
           child: Text("About", style: getTextStyle(),),
           color: Colors.white
         ),
         MaterialButton(
-            onPressed: () => {},
+            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
             child: Text("Team", style: getTextStyle(),),
             color: Colors.white
         ),
@@ -82,17 +82,17 @@ class LargeNavBarElement extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 70.0),
         ),
         MaterialButton(
-            onPressed: () => {},
+            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
             child: Text("Robots", style: getTextStyle(),),
             color: Colors.white
         ),
         MaterialButton(
-            onPressed: () => {},
+            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
             child: Text("Sponors", style: getTextStyle(),),
             color: Colors.white
         ),
         MaterialButton(
-            onPressed: () => {},
+            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
             child: Text("More", style: getTextStyle(),),
             color: Colors.white
         ),
@@ -118,12 +118,12 @@ class SmallNavBarElement extends StatelessWidget {
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
                 child: Text("About", style: getTextStyle(),),
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
                 child: Text("Team", style: getTextStyle(),),
                 color: Colors.white
             ),
@@ -133,22 +133,22 @@ class SmallNavBarElement extends StatelessWidget {
           spacing: 20.0,
           children: <Widget>[
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
                 child: Text("Robots", style: getTextStyle(),),
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
                 child: Text("Sponors", style: getTextStyle(),),
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
                 child: Text("More", style: getTextStyle(),),
                 color: Colors.white
             ),
           ],
-        )
+        ),
       ],
     );
   }
