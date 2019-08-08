@@ -73,28 +73,76 @@ class LargeNavBarElement extends StatelessWidget {
           child: Text("About", style: getTextStyle(),),
           color: Colors.white
         ),
-        MaterialButton(
-            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-            child: Text("Team", style: getTextStyle(),),
-            color: Colors.white
+        DropdownButton<String>(
+          items: <String>['Our Team', 'Team Portal'].map((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value, style: getTextStyle(),),
+            );
+          }).toList(),
+          onChanged: (str) {
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+          },
+          hint: MaterialButton(
+              onPressed: () => {},
+              child: Text("Team", style: getTextStyle(),),
+              color: Colors.white
+          ),
+          iconSize: 0.0,
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 70.0),
         ),
-        MaterialButton(
-            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-            child: Text("Robots", style: getTextStyle(),),
-            color: Colors.white
+        DropdownButton<String>(
+          items: <String>['All Robots', 'FTC Robots', 'VEX Robots', 'FRC Robots'].map((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value, style: getTextStyle(),),
+            );
+          }).toList(),
+          onChanged: (str) {
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+          },
+          hint: MaterialButton(
+              onPressed: () => {},
+              child: Text("Robots", style: getTextStyle(),),
+              color: Colors.white
+          ),
+          iconSize: 0.0,
         ),
-        MaterialButton(
-            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-            child: Text("Sponors", style: getTextStyle(),),
-            color: Colors.white
+        DropdownButton<String>(
+          items: <String>['Our Sponors', 'Sponsor Us'].map((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value, style: getTextStyle(),),
+            );
+          }).toList(),
+          onChanged: (str) {
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+          },
+          hint: MaterialButton(
+              onPressed: () => {},
+              child: Text("Sponsors", style: getTextStyle(),),
+              color: Colors.white
+          ),
+          iconSize: 0.0,
         ),
-        MaterialButton(
-            onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-            child: Text("More", style: getTextStyle(),),
-            color: Colors.white
+        DropdownButton<String>(
+          items: <String>['Contact Us', 'Our Calendar', 'Outreach', 'Resources'].map((String value) {
+            return DropdownMenuItem<String>(
+              value: value,
+              child: Text(value, style: getTextStyle(),),
+            );
+          }).toList(),
+          onChanged: (str) {
+            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+          },
+          hint: MaterialButton(
+              onPressed: () => {},
+              child: Text("More", style: getTextStyle(),),
+              color: Colors.white
+          ),
+          iconSize: 0.0,
         ),
       ],
     );
@@ -122,30 +170,78 @@ class SmallNavBarElement extends StatelessWidget {
                 child: Text("About", style: getTextStyle(),),
                 color: Colors.white
             ),
-            MaterialButton(
-                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-                child: Text("Team", style: getTextStyle(),),
-                color: Colors.white
+            DropdownButton<String>(
+              items: <String>['Our Team', 'Team Portal'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, style: getTextStyle(),),
+                );
+              }).toList(),
+              onChanged: (str) {
+                Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+              },
+              hint: MaterialButton(
+                  onPressed: () => {},
+                  child: Text("Team", style: getTextStyle(),),
+                  color: Colors.white
+              ),
+              iconSize: 0.0,
             ),
           ],
         ),
         Wrap(
           spacing: 20.0,
           children: <Widget>[
-            MaterialButton(
-                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-                child: Text("Robots", style: getTextStyle(),),
-                color: Colors.white
+            DropdownButton<String>(
+              items: <String>['All Robots', 'FTC Robots', 'VEX Robots', 'FRC Robots'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, style: getTextStyle(),),
+                );
+              }).toList(),
+              onChanged: (str) {
+                Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+              },
+              hint: MaterialButton(
+                  onPressed: () => {},
+                  child: Text("Robots", style: getTextStyle(),),
+                  color: Colors.white
+              ),
+              iconSize: 0.0,
             ),
-            MaterialButton(
-                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-                child: Text("Sponors", style: getTextStyle(),),
-                color: Colors.white
+            DropdownButton<String>(
+              items: <String>['Our Sponors', 'Sponsor Us'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, style: getTextStyle(),),
+                );
+              }).toList(),
+              onChanged: (str) {
+                Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+              },
+              hint: MaterialButton(
+                  onPressed: () => {},
+                  child: Text("Sponsors", style: getTextStyle(),),
+                  color: Colors.white
+              ),
+              iconSize: 0.0,
             ),
-            MaterialButton(
-                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
-                child: Text("More", style: getTextStyle(),),
-                color: Colors.white
+            DropdownButton<String>(
+              items: <String>['Contact Us', 'Our Calendar', 'Outreach', 'Resources'].map((String value) {
+                return DropdownMenuItem<String>(
+                  value: value,
+                  child: Text(value, style: getTextStyle(),),
+                );
+              }).toList(),
+              onChanged: (str) {
+                Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+              },
+              hint: MaterialButton(
+                  onPressed: () => {},
+                  child: Text("More", style: getTextStyle(),),
+                  color: Colors.white
+              ),
+              iconSize: 0.0,
             ),
           ],
         ),
