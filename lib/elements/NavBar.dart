@@ -27,7 +27,7 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
               child: Wrap(
                 spacing: 170.0,
                 children: <Widget>[
-                  Text("FALLS CHURCH HIGH SCHOOL ROBOTICS CLUB", style: getTextStyle().copyWith(color: Colors.white, fontSize: 20.0, fontFamily: 'ConcertOne')),
+                  Text("FALLS CHURCH HIGH SCHOOL ROBOTICS CLUB", style: getTextStyle().copyWith(color: Colors.white, fontSize: 20.0, fontFamily: 'ConcertOne'), textAlign: TextAlign.center,),
                 ],
               ),
             )
@@ -64,7 +64,7 @@ class LargeNavBarElement extends StatelessWidget {
       alignment: WrapAlignment.center,
       children: <Widget>[
         MaterialButton(
-          onPressed: () => {},
+          onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}))},
           child: Text("Home", style: getTextStyle()),
           color: Colors.white
         ),
@@ -113,7 +113,7 @@ class SmallNavBarElement extends StatelessWidget {
           spacing: 20.0,
           children: <Widget>[
             MaterialButton(
-                onPressed: () => {},
+                onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}))},
                 child: Text("Home", style: getTextStyle()),
                 color: Colors.white
             ),
