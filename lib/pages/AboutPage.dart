@@ -42,6 +42,30 @@ class AboutPage extends StatelessWidget {
                       ),
                     )
                 ),
+                Padding(
+                  padding: EdgeInsets.all(20.0).copyWith(left: 100.0, right: 100.0),
+                  child: GridView.count(
+                    shrinkWrap: true,
+                    crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 3 : 1,
+                    crossAxisSpacing: 20,
+                    mainAxisSpacing: 20,
+                    childAspectRatio: 1.4,
+                    children: <Widget>[
+                      Container(
+                        color: Colors.red,
+                        height: 100,
+                      ),
+                      Container(
+                        color: Colors.red,
+                        height: 100,
+                      ),
+                      Container(
+                        color: Colors.red,
+                        height: 100,
+                      ),
+                    ],
+                  ),
+                ),
                 Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width >= 850 ? 70.0 : 130.0))
               ],
             ),
