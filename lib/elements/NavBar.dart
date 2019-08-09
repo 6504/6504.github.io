@@ -1,3 +1,4 @@
+import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
@@ -69,7 +70,7 @@ class LargeNavBarElement extends StatelessWidget {
           color: Colors.white
         ),
         MaterialButton(
-          onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
+          onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();}))},
           child: Text("About", style: getTextStyle(),),
           color: Colors.white
         ),
@@ -166,7 +167,7 @@ class SmallNavBarElement extends StatelessWidget {
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')))},
+                onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();}))},
                 child: Text("About", style: getTextStyle(),),
                 color: Colors.white
             ),

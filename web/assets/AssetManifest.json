@@ -1,6 +1,9 @@
 {
   "assets": [
     "images/main_logo.png",
-    "images/team.jpg"
+    "images/team.jpg",
+    "images/frc_logo.png",
+    "images/ftc_logo.png",
+    "images/vex_logo.png"
   ]
 }
