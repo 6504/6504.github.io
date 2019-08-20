@@ -1,5 +1,6 @@
 import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
+import 'package:fchs_robotics/pages/TeamPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
 import 'package:flutter_web/material.dart';
@@ -82,7 +83,11 @@ class LargeNavBarElement extends StatelessWidget {
             );
           }).toList(),
           onChanged: (str) {
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            if(str == 'Our Team') {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
+            } else {
+              Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            }
           },
           hint: MaterialButton(
               onPressed: () => {},
@@ -179,7 +184,11 @@ class SmallNavBarElement extends StatelessWidget {
                 );
               }).toList(),
               onChanged: (str) {
-                Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+                if(str == 'Our Team') {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
+                } else {
+                  Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+                }
               },
               hint: MaterialButton(
                   onPressed: () => {},
