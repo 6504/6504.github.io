@@ -1,3 +1,4 @@
+import 'package:fchs_robotics/elements/Member.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:flutter_web/material.dart';
@@ -41,6 +42,23 @@ class TeamPage extends StatelessWidget {
                           )
                       ),
                     )
+                ),
+                Padding(padding: EdgeInsets.only(bottom: 20.0)),
+                Text("MENTORS", textAlign: TextAlign.center, style: getTextStyle().copyWith(fontSize: 30.0),),
+                Padding(padding: EdgeInsets.only(bottom: 20.0)),
+                GridView.count(
+                  crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 3 : 1,
+                  shrinkWrap: true,
+                  childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2.5 : 1.5,
+                  padding: EdgeInsets.all(MediaQuery.of(context).size.width >= 850 ? 40.0 : 10.0),
+                  children: <Widget>[
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                    Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic"),
+                  ],
                 ),
                 Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width >= 850 ? 70.0 : 130.0))
               ],
