@@ -17,11 +17,11 @@ class Member extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: 100.0,
-              height: 100.0,
+              width: 130.0,
+              height: 130.0,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                image: DecorationImage(image: AssetImage('images/members/$_image_url.png'), fit: BoxFit.fill),
+                image: DecorationImage(image: AssetImage('images/members/$_image_url'), fit: BoxFit.fill),
               ),
             ),
             Text("${_name.toUpperCase()}", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0)),
