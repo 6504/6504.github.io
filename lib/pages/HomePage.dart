@@ -28,20 +28,21 @@ class HomePage extends StatelessWidget {
                     child: Container(
                       width: MediaQuery.of(context).size.width >= 850 ? MediaQuery.of(context).size.width*0.4 : MediaQuery.of(context).size.width*0.95,
                       height: 155,
-                      decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 10.0)], color: Colors.white, borderRadius: BorderRadius.circular(7.0)),
-                      child: Padding(
-                        padding: EdgeInsets.all(5.0),
-                        child: Column(
-                          children: <Widget>[
-                            Text("Change the World!", style: getTextStyle().copyWith(fontWeight: FontWeight.bold),),
-                            Wrap(
-                              children: <Widget>[
-                                Text("We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.", style: getTextStyle(),)
-                              ],
-                            )
-                          ],
+                      child: Card(
+                        child: Padding(
+                          padding: EdgeInsets.all(5.0),
+                          child: Column(
+                            children: <Widget>[
+                              Text("Change the World!", style: getTextStyle().copyWith(fontWeight: FontWeight.bold),),
+                              Wrap(
+                                children: <Widget>[
+                                  Text("We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.", style: getTextStyle(),)
+                                ],
+                              )
+                            ],
+                          ),
                         ),
-                      )
+                      ),
                     )
                   ),
                 )
@@ -56,65 +57,74 @@ class HomePage extends StatelessWidget {
                 childAspectRatio: 1.4,
                 physics: ScrollPhysics(),
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 10.0)], color: Colors.white, borderRadius: BorderRadius.circular(7.0)),
-                    alignment: Alignment.topCenter,
-                    padding: EdgeInsets.all(10.0),
-                    child: Column(
-                      children: <Widget>[
-                        m.Image.asset('images/frc_logo.png', width: 200,),
-                        Wrap(
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Column(
                           children: <Widget>[
-                            Text("The FIRST Robotics Challenge, also known as FRC, is the largest competition we compete in. Aimed for high schoolers, students work with advanced machinery, large industrial tools, computer aided design (CAD), electronics, programming, vision processing, and robotics autonomy. FRC also challenges students in other fields, such as business, film, art/animation, and marketing.", style: getTextStyle(),),
+                            m.Image.asset('images/frc_logo.png', width: 200,),
+                            Wrap(
+                              children: <Widget>[
+                                Text("The FIRST Robotics Challenge, also known as FRC, is the largest competition we compete in. Aimed for high schoolers, students work with advanced machinery, large industrial tools, computer aided design (CAD), electronics, programming, vision processing, and robotics autonomy. FRC also challenges students in other fields, such as business, film, art/animation, and marketing.", style: getTextStyle(),),
+                              ],
+                            ),
+                            MaterialButton(
+                              onPressed: () => {},
+                              color: Colors.blue,
+                              child: Text("See FRC Info", style: getTextStyle().copyWith(color: Colors.white),),
+                            )
                           ],
                         ),
-                        MaterialButton(
-                          onPressed: () => {},
-                          color: Colors.blue,
-                          child: Text("See FRC Info", style: getTextStyle().copyWith(color: Colors.white),),
-                        )
-                      ],
-                    ),
+                      ),
+                    )
                   ),
-                  Container(
-                    decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 10.0)], color: Colors.white, borderRadius: BorderRadius.circular(7.0)),
-                    alignment: Alignment.topCenter,
-                    padding: EdgeInsets.all(10.0),
-                    child: Column(
-                      children: <Widget>[
-                        m.Image.asset('images/ftc_logo.png', width: 200,),
-                        Wrap(
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Column(
                           children: <Widget>[
-                            Text("The alternate beginning step into the world of robotics, the FIRST Tech Challenge (aka FTC) is an intermediate level robotics competition. We began competing in FTC in 2015 and since then have won several awards with our robots.", style: getTextStyle(),),
+                            m.Image.asset('images/ftc_logo.png', width: 200,),
+                            Wrap(
+                              children: <Widget>[
+                                Text("The alternate beginning step into the world of robotics, the FIRST Tech Challenge (aka FTC) is an intermediate level robotics competition. We began competing in FTC in 2015 and since then have won several awards with our robots.", style: getTextStyle(),),
+                              ],
+                            ),
+                            MaterialButton(
+                              onPressed: () => {},
+                              color: Colors.orange,
+                              child: Text("See FTC Info", style: getTextStyle().copyWith(color: Colors.white),),
+                            )
                           ],
                         ),
-                        MaterialButton(
-                          onPressed: () => {},
-                          color: Colors.orange,
-                          child: Text("See FTC Info", style: getTextStyle().copyWith(color: Colors.white),),
-                        )
-                      ],
-                    ),
+                      ),
+                    )
                   ),
-                  Container(
-                    decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 10.0)], color: Colors.white, borderRadius: BorderRadius.circular(7.0)),
-                    alignment: Alignment.topCenter,
-                    padding: EdgeInsets.all(10.0),
-                    child: Column(
-                      children: <Widget>[
-                        m.Image.asset('images/vex_logo.png', width: 200,),
-                        Wrap(
+                  Card(
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Align(
+                        alignment: Alignment.topCenter,
+                        child: Column(
                           children: <Widget>[
-                            Text("One of the beginning stepping stones into robotics, the VEX Robotics Competition is an intermediate level robotics competition and was the first competition we competed in. Since our first VEX Competition in 2014, we have won several distinctions with our robots; our many, many robots.", style: getTextStyle(),),
+                            m.Image.asset('images/vex_logo.png', width: 200,),
+                            Wrap(
+                              children: <Widget>[
+                                Text("One of the beginning stepping stones into robotics, the VEX Robotics Competition is an intermediate level robotics competition and was the first competition we competed in. Since our first VEX Competition in 2014, we have won several distinctions with our robots; our many, many robots.", style: getTextStyle(),),
+                              ],
+                            ),
+                            MaterialButton(
+                              onPressed: () => {},
+                              color: Colors.red,
+                              child: Text("See VEX Info", style: getTextStyle().copyWith(color: Colors.white),),
+                            )
                           ],
                         ),
-                        MaterialButton(
-                          onPressed: () => {},
-                          color: Colors.red,
-                          child: Text("See VEX Info", style: getTextStyle().copyWith(color: Colors.white),),
-                        )
-                      ],
-                    ),
+                      ),
+                    )
                   ),
                 ],
               ),
