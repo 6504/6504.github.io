@@ -49,6 +49,7 @@ class TeamPage extends StatelessWidget {
               GridView.count(
                 crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 3 : 1,
                 shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2.5 : 1.5,
                 padding: EdgeInsets.all(MediaQuery.of(context).size.width >= 850 ? 40.0 : 10.0),
                 children: <Widget>[
@@ -66,6 +67,7 @@ class TeamPage extends StatelessWidget {
               GridView.count(
                 crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 2 : 1,
                 shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 3 : 1.5,
                 padding: EdgeInsets.all(MediaQuery.of(context).size.width >= 850 ? 40.0 : 10.0),
                 children: <Widget>[
@@ -76,16 +78,17 @@ class TeamPage extends StatelessWidget {
               GridView.count(
                 crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 6 : 1,
                 shrinkWrap: true,
+                physics: NeverScrollableScrollPhysics(),
                 childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 1.25 : 1.5,
                 padding: EdgeInsets.all(MediaQuery.of(context).size.width >= 850 ? 40.0 : 10.0),
                 children: <Widget>[
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
-                  Member("Test Mentor", "Test Position", "I'm a Test Mentor!", "nopic.png"),
+                  Member("Akira Tamashiro", "Head of Photography", "Coming Soon", "akira.jpg"),
+                  Member("Charlie Duong", "Treasurer", "Coming Soon", "nopic.png"),
+                  Member("Ted Tran", "Treasurer", "Coming Soon", "nopic.png"),
+                  Member("Liam Ryde", "Head of Programming", "Coming Soon", "nopic.png"),
+                  Member("Lizzie Nguyen", "Head of Communications", "Coming Soon", "lizzie.jpg"),
+                  Member("Francisco Mejia", "Safety Captain", "Coming Soon", "francisco.jpg"),
+                  Member("Dylan Corcoran", "Head of Modelling", "Coming Soon", "dylanthekneekid.jpg"),
                 ],
               ),
               Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width >= 850 ? 70.0 : 130.0))
