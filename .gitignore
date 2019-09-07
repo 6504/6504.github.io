@@ -1,5 +1,8 @@
 sponsors/index.html
 
+.packages
+pubspec.lock
+
 # ---> JetBrains
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 

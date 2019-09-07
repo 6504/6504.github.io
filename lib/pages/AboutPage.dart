@@ -1,3 +1,4 @@
+import 'package:fchs_robotics/elements/AboutCard.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:flutter_web/material.dart';
@@ -50,171 +51,23 @@ class AboutPage extends StatelessWidget {
                       Wrap(
                         alignment: WrapAlignment.center,
                         children: <Widget>[
-                          Text("2014", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Founding of the Club", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("The founding of the club. The primordial club was run by Dan Tra, Ralph Albrecht, Anhtuan Nguyen, and Danielle Kaldmaa. Our first robots were built, but they weren't great...", style: getTextStyle(),),
-                                  Text("September 2014", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Rookie competitions for VEX and FTC", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("Our rookie year for competing in VEX Robotics and the FIRST Tech Challenge. One of our VEX teams even advanced to the Virginia State Tournament.", style: getTextStyle(),),
-                                  Text("December 2014 - January 2015", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Text("2015", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Creation of FCHS NXT Challenge", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("We and GiTech (Girls in Technology) co-hosted the First Annual FCHS Sumobot Tournament.", style: getTextStyle(),),
-                                  Text("January 2015", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("NOVA Maker-Faire", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("We attended the NOVA Maker-Faire at George Mason university and participated in live demos.", style: getTextStyle(),),
-                                  Text("", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Jr. FLL Expo at TJ Public Library", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("Hosted at Thomas Jefferson Public Libarary in Falls Church, we volunteered and helped host the event while promoting STEM Education to schoolchildren in the Falls Church Region.", style: getTextStyle(),),
-                                  Text("April 2016", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Text("2016", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Founding of the FRC Team", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("This was the year in which we founded our FRC team and began to prepare for FIRST Steamworks.", style: getTextStyle(),),
-                                  Text("April 2016", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Text("2017", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("First FRC Competition", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("We did fairly well for our rookie year and recieved several awards for our school.", style: getTextStyle(),),
-                                  Text("April 2017", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Congressman Don Beyers' Visit", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("Hosted in our classroom at Falls Church High School, Congressman Don Beyer paid a visit and discussed the future of STEM.", style: getTextStyle(),),
-                                  Text("April 2017", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
-                          Card(
-                            color: Colors.white,
-                            child: Padding(
-                              padding: EdgeInsets.all(20.0),
-                              child: GridView.count(
-                                shrinkWrap: true,
-                                crossAxisCount: 1,
-                                childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                children: <Widget>[
-                                  Text("Website Developed", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                  Text("All credit goes to Chandi and Anhtuan. Took about a month and was programmed from scratch using Github Pages and some Bootstrap framework.", style: getTextStyle(),),
-                                  Text("April 2017", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                ],
-                              ),
-                            )
-                          ),
+                          Text("2019", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
+                          AboutCard("Major Website Overhaul", "The website was completely re-coded in Flutter, a universal project SDK. The new site, sporting a new color scheme and navigation system, has material design. All the source code has been made available on our GitHub Page.", "September 2019"),
                           Text("2018", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          Card(
-                              color: Colors.white,
-                              child: Padding(
-                                padding: EdgeInsets.all(20.0),
-                                child: GridView.count(
-                                  shrinkWrap: true,
-                                  crossAxisCount: 1,
-                                  childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 50 : 7,
-                                  children: <Widget>[
-                                    Text("FIRST Power-UP FRC Competition", style: getTextStyle().copyWith(fontWeight: FontWeight.bold, fontSize: 20.0),),
-                                    Text("During our second year competing in FRC, we suprised ourselves by placing as finalists at Battlefield High School and making it to the District Championship at the Xfinity Center.", style: getTextStyle(),),
-                                    Text("March 2018", style: getTextStyle().copyWith(fontWeight: FontWeight.w100),)
-                                  ],
-                                ),
-                              )
-                          ),
+                          AboutCard("FIRST Power-UP FRC Competition", "During our second year competing in FRC, we suprised ourselves by placing as finalists at Battlefield High School and making it to the District Championship at the Xfinity Center.", "March 2018"),
+                          Text("2017", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
+                          AboutCard("Website Developed", "All credit goes to Chandi and Anhtuan. Took about a month and was programmed from scratch using Github Pages and some Bootstrap framework.", "April 2017"),
+                          AboutCard("Congressman Don Beyers' Visit", "Hosted in our classroom at Falls Church High School, Congressman Don Beyer paid a visit and discussed the future of STEM.", "April 2017"),
+                          AboutCard("First FRC Competition", "We did fairly well for our rookie year and recieved several awards for our school.", "April 2017"),
+                          Text("2016", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
+                          AboutCard("Founding of the FRC Team", "This was the year in which we founded our FRC team and began to prepare for FIRST Steamworks.", "April 2016"),
+                          Text("2015", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
+                          AboutCard("Jr. FLL Expo at TJ Public Library", "Hosted at Thomas Jefferson Public Libarary in Falls Church, we volunteered and helped host the event while promoting STEM Education to schoolchildren in the Falls Church Region.", "April 2016"),
+                          AboutCard("NOVA Maker-Faire", "We attended the NOVA Maker-Faire at George Mason university and participated in live demos.", ""),
+                          AboutCard("Creation of FCHS NXT Challenge", "We and GiTech (Girls in Technology) co-hosted the First Annual FCHS Sumobot Tournament.", "January 2015"),
+                          Text("2014", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
+                          AboutCard("Rookie competitions for VEX and FTC", "Our rookie year for competing in VEX Robotics and the FIRST Tech Challenge. One of our VEX teams even advanced to the Virginia State Tournament.", "December 2014 - January 2015"),
+                          AboutCard("Founding of the Club", "The founding of the club. The primordial club was run by Dan Tra, Ralph Albrecht, Anhtuan Nguyen, and Danielle Kaldmaa. Our first robots were built, but they weren't great...", "September 2014"),
                         ],
                       ),
                     ],
