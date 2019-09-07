@@ -1,6 +1,7 @@
 import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/pages/TeamPage.dart';
+import 'package:fchs_robotics/pages/portal/DashboardPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
 import 'package:flutter_web/material.dart';
@@ -85,8 +86,8 @@ class LargeNavBarElement extends StatelessWidget {
           onChanged: (str) {
             if(str == 'Our Team') {
               Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
-            } else {
-              Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            } else if(str == 'Team Portal') {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {return DashboardPage();}));
             }
           },
           hint: MaterialButton(
@@ -134,7 +135,7 @@ class LargeNavBarElement extends StatelessWidget {
           iconSize: 0.0,
         ),
         DropdownButton<String>(
-          items: <String>['Contact Us', 'Our Calendar', 'Outreach', 'Resources'].map((String value) {
+          items: <String>['Contact Us', 'Our Calendar', 'Outreach'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
               child: Text(value, style: getTextStyle(),),

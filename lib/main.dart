@@ -1,3 +1,4 @@
+import 'package:fchs_robotics/pages/portal/DashboardPage.dart';
 import 'package:flutter_web/material.dart';
 import 'dart:html';
 
@@ -19,6 +20,8 @@ Widget getPage(hash) {
     return AboutPage();
   } else if(hash == "/team") {
     return TeamPage();
+  } else if(hash == "/dashboard") {
+    return DashboardPage();
   } else {
     return HomePage();
   }

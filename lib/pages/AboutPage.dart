@@ -52,7 +52,7 @@ class AboutPage extends StatelessWidget {
                         alignment: WrapAlignment.center,
                         children: <Widget>[
                           Text("2019", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
-                          AboutCard("Major Website Overhaul", "The website was completely re-coded in Flutter, a universal project SDK. The new site, sporting a new color scheme and navigation system, has material design. All the source code has been made available on our GitHub Page.", "September 2019"),
+                          AboutCard("Major Website Overhaul", "The website was completely re-coded in Flutter, a universal project SDK. The new site, sporting a new color scheme and navigation system, has material design. All the source code has been made available on our GitHub Page. Currently, all credit goes to Liam for the site", "September 2019"),
                           Text("2018", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
                           AboutCard("FIRST Power-UP FRC Competition", "During our second year competing in FRC, we suprised ourselves by placing as finalists at Battlefield High School and making it to the District Championship at the Xfinity Center.", "March 2018"),
                           Text("2017", style: getTextStyle().copyWith(fontFamily: 'ConcertOne', fontSize: 30.0),),
