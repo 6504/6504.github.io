@@ -1,7 +1,7 @@
 import 'package:fchs_robotics/elements/AboutCard.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 
 class AboutPage extends StatelessWidget {
 

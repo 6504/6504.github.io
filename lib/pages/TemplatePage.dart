@@ -1,5 +1,5 @@
 import 'package:fchs_robotics/elements/NavBar.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 
 class TemplatePage extends StatelessWidget {
   @override

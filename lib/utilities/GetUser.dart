@@ -3,7 +3,7 @@ import 'dart:html';
 import 'package:fchs_robotics/pages/portal/LoginPage.dart';
 import 'package:firebase/firebase.dart';
 import 'package:firebase/firestore.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 
 Future<DocumentSnapshot> getUser(App app, BuildContext context) async {
   if(window.localStorage.containsKey('email') && window.localStorage.containsKey('password')) {

@@ -1,6 +1,6 @@
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
 
@@ -18,19 +18,51 @@ class LoginPage extends StatelessWidget {
             child: ListView(
               children: <Widget>[
                 Padding(padding: EdgeInsets.only(top: 60.0),),
+                Padding(padding: EdgeInsets.only(top: 60.0),),
                 Text('Welcome! Please login...', style: getTextStyle().copyWith(fontSize: 20.0), textAlign: TextAlign.center,),
                 Card(
-                  margin: EdgeInsets.all(20.0),
-                  child: Column(
-                    children: <Widget>[
-                      TextField(
-                        controller: _email,
-                        enableInteractiveSelection: true,
-                        decoration: InputDecoration(hintText: "E-mail", hintStyle: getTextStyle()),
-                        style: getTextStyle(),
-                      )
-                    ],
-                  ),
+                  margin: EdgeInsets.all(100.0).copyWith(left: 300.00).copyWith(right: 300.0),
+                  child: Padding(
+                    padding: EdgeInsets.all(20.0),
+                    child: Column(
+                      children: <Widget>[
+                        TextField(
+                          controller: _email,
+                          enableInteractiveSelection: true,
+                          keyboardType: TextInputType.emailAddress,
+                          decoration: InputDecoration(hintText: "E-mail", hintStyle: getTextStyle()),
+                          style: getTextStyle(),
+                        ),
+                        TextField(
+                          controller: _password,
+                          enableInteractiveSelection: true,
+                          keyboardType: TextInputType.text,
+                          decoration: InputDecoration(hintText: "Password", hintStyle: getTextStyle()),
+                          style: getTextStyle(),
+                        ),
+                        Row(
+
+                          children: <Widget>[
+                            MaterialButton(
+                              onPressed: () => {
+                                print(_email.text)
+                              },
+                              child: Text("LOGIN", style: getTextStyle().copyWith(color: Colors.white),),
+                              color: Colors.blue,
+                            ),
+                            Padding(padding: EdgeInsets.symmetric(horizontal: 10.0),),
+                            MaterialButton(
+                              onPressed: () => {
+                                print(_email.text)
+                              },
+                              child: Text("REGISTER", style: getTextStyle().copyWith(color: Colors.white),),
+                              color: Colors.orangeAccent,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
                 ),
                 Padding(padding: EdgeInsets.only(bottom: MediaQuery
                     .of(context)

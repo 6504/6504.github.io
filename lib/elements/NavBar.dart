@@ -4,7 +4,7 @@ import 'package:fchs_robotics/pages/TeamPage.dart';
 import 'package:fchs_robotics/pages/portal/DashboardPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 
 class NavBar extends StatefulWidget {
 
@@ -187,8 +187,8 @@ class SmallNavBarElement extends StatelessWidget {
               onChanged: (str) {
                 if(str == 'Our Team') {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
-                } else {
-                  Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+                } else if(str == 'Team Portal') {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {return DashboardPage();}));
                 }
               },
               hint: MaterialButton(

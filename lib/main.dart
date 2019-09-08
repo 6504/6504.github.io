@@ -1,5 +1,5 @@
 import 'package:fchs_robotics/pages/portal/DashboardPage.dart';
-import 'package:flutter_web/material.dart';
+import 'package:flutter/material.dart';
 import 'dart:html';
 
 import 'package:fchs_robotics/pages/HomePage.dart';
@@ -7,7 +7,7 @@ import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/TeamPage.dart';
 
 
-void main() {
+Future main() async {
   runApp(
     MaterialApp(
       home: getPage(window.location.hash.substring(1)),
