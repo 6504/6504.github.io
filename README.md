@@ -5,8 +5,8 @@ The website itself is hosted as a Github Page, using Google's Dart & Flutter for
 
 ## How to Run
 To run this website or build it for release, you'll need both the Flutter SDK and the Dart SDK.
-Once you've gotten both, run `flutter pub global activate webdev` and make sure that both dart and flutter are added to your PATH.
-Run `webdev serve` to get the program to start. `https://github.com/flutter/flutter_web` is the repository for the essentials.
+Once you've gotten both, run `flutter build web` and make sure that both dart and flutter are added to your PATH.
+`https://github.com/flutter/flutter` is the repository for the essentials.
 
 ## Authors
 * [Liam Ryde](https://github.com/xeu100) - Main Developer of Experimental Dart Version
