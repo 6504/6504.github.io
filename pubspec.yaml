@@ -17,8 +17,8 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/
-    - assets/images/members/
+    - images/
+    - images/members/
 
   fonts:
     - family: ConcertOne
