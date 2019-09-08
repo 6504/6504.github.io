@@ -1,6 +1,6 @@
 import 'dart:html';
 
-import 'package:fchs_robotics/pages/HomePage.dart';
+import 'package:fchs_robotics/pages/portal/LoginPage.dart';
 import 'package:firebase/firebase.dart';
 import 'package:firebase/firestore.dart';
 import 'package:flutter_web/material.dart';
@@ -20,7 +20,7 @@ Future<DocumentSnapshot> getUser(App app, BuildContext context) async {
 
 void navigateLogin(BuildContext context) {
   window.localStorage.clear();
-  Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}));
+  Navigator.push(context, MaterialPageRoute(builder: (context) {return LoginPage();}));
 }
 
 Map<String, dynamic> getUserDataBase() {
