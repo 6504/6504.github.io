@@ -13,3 +13,21 @@ dev_dependencies:
   build_runner: ^1.5.0
   build_web_compilers: ^2.1.0
   pedantic: ^1.7.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/members/
+
+  fonts:
+    - family: ConcertOne
+      fonts:
+        - asset: assets/fonts/concertone-regular.ttf
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-ExtraLight.ttf
+          weight: 100
+        - asset: assets/fonts/Nunito-Bold.ttf
+          weight: 700
