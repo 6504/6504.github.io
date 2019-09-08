@@ -32,6 +32,8 @@ class DashboardPageState extends State<DashboardPage> {
            widget._userdata = snapshot.data();
          })
        }
+    }).catchError((err) => {
+       navigateLogin(context)
     });
   }
 

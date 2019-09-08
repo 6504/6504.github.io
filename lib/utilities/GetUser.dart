@@ -19,6 +19,7 @@ Future<DocumentSnapshot> getUser(App app, BuildContext context) async {
 }
 
 void navigateLogin(BuildContext context) {
+  window.localStorage.clear();
   Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}));
 }
 
