@@ -87,7 +87,7 @@ class LargeNavBarElement extends StatelessWidget {
             if(str == 'Our Team') {
               Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
             } else if(str == 'Team Portal') {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {return DashboardPage();}));
+              Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
             }
           },
           hint: MaterialButton(
@@ -188,7 +188,7 @@ class SmallNavBarElement extends StatelessWidget {
                 if(str == 'Our Team') {
                   Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
                 } else if(str == 'Team Portal') {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {return DashboardPage();}));
+                  Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
                 }
               },
               hint: MaterialButton(
