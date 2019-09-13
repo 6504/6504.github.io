@@ -1,10 +1,10 @@
 import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/pages/TeamPage.dart';
-import 'package:fchs_robotics/pages/portal/DashboardPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class NavBar extends StatefulWidget {
 
@@ -67,12 +67,12 @@ class LargeNavBarElement extends StatelessWidget {
       alignment: WrapAlignment.center,
       children: <Widget>[
         MaterialButton(
-          onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}))},
+          onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage(), duration: Duration(milliseconds: 500)))},
           child: Text("Home", style: getTextStyle()),
           color: Colors.white
         ),
         MaterialButton(
-          onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();}))},
+            onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: AboutPage(), duration: Duration(milliseconds: 500)))},
           child: Text("About", style: getTextStyle(),),
           color: Colors.white
         ),
@@ -85,7 +85,7 @@ class LargeNavBarElement extends StatelessWidget {
           }).toList(),
           onChanged: (str) {
             if(str == 'Our Team') {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
+              Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: TeamPage(), duration: Duration(milliseconds: 500)));
             } else if(str == 'Team Portal') {
               Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
             }
@@ -168,12 +168,12 @@ class SmallNavBarElement extends StatelessWidget {
           spacing: 20.0,
           children: <Widget>[
             MaterialButton(
-                onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return HomePage();}))},
+                onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage(), duration: Duration(milliseconds: 500)))},
                 child: Text("Home", style: getTextStyle()),
                 color: Colors.white
             ),
             MaterialButton(
-                onPressed: () => {Navigator.push(context, MaterialPageRoute(builder: (context) {return AboutPage();}))},
+                onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: AboutPage(), duration: Duration(milliseconds: 500)))},
                 child: Text("About", style: getTextStyle(),),
                 color: Colors.white
             ),
@@ -186,7 +186,7 @@ class SmallNavBarElement extends StatelessWidget {
               }).toList(),
               onChanged: (str) {
                 if(str == 'Our Team') {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {return TeamPage();}));
+                  Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: TeamPage(), duration: Duration(milliseconds: 500)));
                 } else if(str == 'Team Portal') {
                   Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
                 }
