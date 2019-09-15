@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:flutter/material.dart';
@@ -65,10 +66,11 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             m.Image.asset('images/frc_logo.png', width: 200,),
-                            Wrap(
-                              children: <Widget>[
-                                Text("The FIRST Robotics Challenge, also known as FRC, is the largest competition we compete in. Aimed for high schoolers, students work with advanced machinery, large industrial tools, computer aided design (CAD), electronics, programming, vision processing, and robotics autonomy. FRC also challenges students in other fields, such as business, film, art/animation, and marketing.", style: getTextStyle(),),
-                              ],
+                            AutoSizeText(
+                              "The FIRST Robotics Challenge, also known as FRC, is the largest competition we compete in. Aimed for high schoolers, students work with advanced machinery, large industrial tools, computer aided design (CAD), electronics, programming, vision processing, and robotics autonomy. FRC also challenges students in other fields, such as business, film, art/animation, and marketing.",
+                              style: getTextStyle(),
+                              minFontSize: 13.0,
+                              maxLines: 6,
                             ),
                             MaterialButton(
                               onPressed: () => {},
@@ -88,10 +90,11 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             m.Image.asset('images/ftc_logo.png', width: 200,),
-                            Wrap(
-                              children: <Widget>[
-                                Text("The alternate beginning step into the world of robotics, the FIRST Tech Challenge (aka FTC) is an intermediate level robotics competition. We began competing in FTC in 2015 and since then have won several awards with our robots.", style: getTextStyle(),),
-                              ],
+                            AutoSizeText(
+                              "The alternate beginning step into the world of robotics, the FIRST Tech Challenge (aka FTC) is an intermediate level robotics competition. We began competing in FTC in 2015 and since then have won several awards with our robots.",
+                              style: getTextStyle(),
+                              minFontSize: 13.0,
+                              maxLines: 6,
                             ),
                             MaterialButton(
                               onPressed: () => {},
@@ -111,10 +114,11 @@ class HomePage extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             m.Image.asset('images/vex_logo.png', width: 200,),
-                            Wrap(
-                              children: <Widget>[
-                                Text("One of the beginning stepping stones into robotics, the VEX Robotics Competition is an intermediate level robotics competition and was the first competition we competed in. Since our first VEX Competition in 2014, we have won several distinctions with our robots; our many, many robots.", style: getTextStyle(),),
-                              ],
+                            AutoSizeText(
+                              "One of the beginning stepping stones into robotics, the VEX Robotics Competition is an intermediate level robotics competition and was the first competition we competed in. Since our first VEX Competition in 2014, we have won several distinctions with our robots; our many, many robots.",
+                              style: getTextStyle(),
+                              minFontSize: 13.0,
+                              maxLines: 6,
                             ),
                             MaterialButton(
                               onPressed: () => {},
