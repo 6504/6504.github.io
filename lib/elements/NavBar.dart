@@ -1,6 +1,7 @@
 import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/pages/TeamPage.dart';
+import 'package:fchs_robotics/pages/dashboard/LoginPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'dart:html';
 import 'package:flutter/material.dart';
@@ -87,7 +88,7 @@ class LargeNavBarElement extends StatelessWidget {
             if(str == 'Our Team') {
               Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: TeamPage(), duration: Duration(milliseconds: 500)));
             } else if(str == 'Team Portal') {
-              Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+              Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: LoginPage(), duration: Duration(milliseconds: 500)));
             }
           },
           hint: MaterialButton(
