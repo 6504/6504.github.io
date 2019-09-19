@@ -23468,13 +23468,10 @@ S.z9.prototype={
 $0:function(){},
 $S:1}
 S.z8.prototype={
-$1:function(a){var u,t=null,s="nickname",r=this.a,q=M.bs(t,t,t,t,S.cv(t,t,t,t,t,X.zi(C.X,C.f7,new L.h3("images/members/"+H.d(J.bk(r.a.d,"avatar")==null?"nopic.png":J.bk(r.a.d,"avatar")),t,t)),C.aN),60,t,t,60)
-C.e.H("Welcome, ",J.bk(r.a.d,s))
-r=J.bk(r.a.d,s)
-u=[N.av]
-r=T.rc(H.c([V.f1(new T.aq(new V.L(10,10,10,10),T.rc(H.c([q,new T.aq(new V.L(10,0,0,0),t,t),L.X(r,t,t,t,t,t,t,t,A.V(t,t,t,t,t,t,t,t,"Nunito",t,t,15,t,t,t,t,!0,t,t,t,t,t,t).iJ(25),t,t,t)],u),C.bd,C.ac,C.bQ),t),t,t)],u),C.bd,C.ac,C.bQ)
-q=F.W(a,!1).a.a>=850?70:130
-return T.d6(C.ao,H.c([B.l1(H.c([new T.aq(new V.L(0,60,0,0),t,t),r,new T.aq(new V.L(0,0,0,q),t,t)],u),t,t,t,!1),new A.fm(t)],u),C.ae,t,t)}}
+$1:function(a){var u=null,t="nickname",s=this.a,r=M.bs(u,u,u,u,S.cv(u,u,u,u,u,X.zi(C.X,C.f7,new L.h3("images/members/"+H.d(J.bk(s.a.d,"avatar")==null?"nopic.png":J.bk(s.a.d,"avatar")),u,u)),C.aN),60,u,u,60),q=[N.av]
+s=T.rc(H.c([V.f1(new T.aq(new V.L(10,10,10,10),T.rc(H.c([r,new T.aq(new V.L(10,0,0,0),u,u),L.X("Welcome, "+H.d(J.bk(s.a.d,t)==null?"null":J.bk(s.a.d,t))+"!",u,u,u,u,u,u,u,A.V(u,u,u,u,u,u,u,u,"Nunito",u,u,15,u,u,u,u,!0,u,u,u,u,u,u).iJ(25),u,u,u)],q),C.bd,C.ac,C.bQ),u),u,u)],q),C.bd,C.ac,C.bQ)
+r=F.W(a,!1).a.a>=850?70:130
+return T.d6(C.ao,H.c([B.l1(H.c([new T.aq(new V.L(0,60,0,0),u,u),s,new T.aq(new V.L(0,0,0,r),u,u)],q),u,u,u,!1),new A.fm(u)],q),C.ae,u,u)}}
 O.DD.prototype={
 K:function(a){var u=K.Yi()
 u=u.gQ7(u).PM(new O.DI(this,a))
