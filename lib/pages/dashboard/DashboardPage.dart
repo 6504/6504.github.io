@@ -59,7 +59,7 @@ class DashboardPageState extends State<DashboardPage> {
                                 ),
                               ),
                               Padding(padding: EdgeInsets.only(left: 10.0),),
-                              Text("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}", style: getTextStyle().copyWith(fontSize: 25.0),)
+                              Text("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}!", style: getTextStyle().copyWith(fontSize: 25.0),)
                             ],
                           ),
                         ),
