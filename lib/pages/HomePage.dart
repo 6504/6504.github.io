@@ -28,7 +28,7 @@ class HomePage extends StatelessWidget {
                     alignment: Alignment.bottomCenter,
                     child: Container(
                       width: MediaQuery.of(context).size.width >= 850 ? MediaQuery.of(context).size.width*0.4 : MediaQuery.of(context).size.width*0.95,
-                      height: 155,
+                      height: 170,
                       child: Card(
                         child: Padding(
                           padding: EdgeInsets.all(5.0),
@@ -37,7 +37,12 @@ class HomePage extends StatelessWidget {
                               Text("Change the World!", style: getTextStyle().copyWith(fontWeight: FontWeight.bold),),
                               Wrap(
                                 children: <Widget>[
-                                  Text("We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.", style: getTextStyle(),)
+                                  AutoSizeText(
+                                    "We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.",
+                                    style: getTextStyle(),
+                                    minFontSize: 12.0,
+                                    maxLines: 12,
+                                  )
                                 ],
                               )
                             ],
@@ -48,14 +53,10 @@ class HomePage extends StatelessWidget {
                   ),
                 )
               ),
-              GridView.count(
+              ListView(
                 shrinkWrap: true,
-                crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 3 : 1,
-                crossAxisSpacing: 20,
                 padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width >= 850 ? 200 : 10).copyWith(top: 10.0),
-                mainAxisSpacing: 20,
                 scrollDirection: Axis.vertical,
-                childAspectRatio: 1.4,
                 physics: ScrollPhysics(),
                 children: <Widget>[
                   Card(
@@ -132,7 +133,7 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width >= 850 ? 70.0 : 130.0))
+              Padding(padding: EdgeInsets.only(bottom: MediaQuery.of(context).size.width >= 850 ? 130.0 : 200.0))
             ],
           ),
           NavBar(),
