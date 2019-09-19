@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/pages/dashboard/DashboardPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
@@ -9,16 +11,19 @@ class LoginPage extends StatelessWidget {
 
   TextEditingController _email = TextEditingController();
   TextEditingController _password = TextEditingController();
+  StreamSubscription<User> _authState;
 
   @override
   Widget build(BuildContext context) {
-    auth().onAuthStateChanged.listen((user) => {
+    _authState = auth().onAuthStateChanged.listen((user) => {
       print("User Information: "+user.toString()),
       if(user!=null) {
+        _authState.cancel(),
         Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: DashboardPage(user)))
       }
-    }).onError((err) => {
-      print("Error Information: "+err)
+    });
+    _authState.onError((error) => {
+      print("Error Information: "+error)
     });
     return Scaffold(
       backgroundColor: Colors.white10,
