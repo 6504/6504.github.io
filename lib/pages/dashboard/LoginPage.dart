@@ -47,7 +47,7 @@ class LoginPage extends StatelessWidget {
                             child: Column(
                               children: <Widget>[
                                 TextFormField(style: getTextStyle(), decoration: InputDecoration(hintText: "e-mail", hintStyle: getTextStyle()), controller: _email,),
-                                TextFormField(style: getTextStyle(), decoration: InputDecoration(hintText: "passowrd", hintStyle: getTextStyle()), obscureText: true, controller: _password,)
+                                TextFormField(style: getTextStyle(), decoration: InputDecoration(hintText: "password", hintStyle: getTextStyle()), obscureText: true, controller: _password,)
                               ],
                             ),
                           ),
