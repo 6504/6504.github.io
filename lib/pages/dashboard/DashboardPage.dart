@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:fchs_robotics/elements/DashboardKit.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:firebase/firebase.dart';
@@ -42,10 +43,11 @@ class DashboardPageState extends State<DashboardPage> {
                   Padding(padding: EdgeInsets.only(top: 60.0),),
                   GridView.count(
                     crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 5 : 1,
-                    childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2 : 3,
+                    childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2.5 : 3,
                     physics: NeverScrollableScrollPhysics(),
-                    crossAxisSpacing: 20.0,
-                    mainAxisSpacing: 20.0,
+                    crossAxisSpacing: 10.0,
+                    mainAxisSpacing: 10.0,
+                    padding: EdgeInsets.all(10.0),
                     shrinkWrap: true,
                     scrollDirection: Axis.vertical,
                     children: <Widget>[
@@ -69,6 +71,7 @@ class DashboardPageState extends State<DashboardPage> {
                           ),
                         ),
                       ),
+                      DashboardChecklistElement(widget._userData),
                     ],
                   ),
                   Padding(padding: EdgeInsets.only(bottom: MediaQuery
