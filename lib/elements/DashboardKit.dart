@@ -28,7 +28,7 @@ class DashboardChecklistElement extends StatelessWidget{
               ],
             ),
             Divider(),
-            AutoSizeText((_userData["hasSignedForms"]||_userData["hasPaidDues"])?"You're good to go!":"You have one or more things to get done...", style: getTextStyle().copyWith(fontSize: 15), minFontSize: 10, maxFontSize: 17,),
+            AutoSizeText((_userData["hasSignedForms"]&&_userData["hasPaidDues"])?"You're good to go!":"You have one or more things to get done...", style: getTextStyle().copyWith(fontSize: 15), minFontSize: 10, maxFontSize: 17,),
           ],
         ),
       ),

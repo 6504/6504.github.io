@@ -1,9 +1,11 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fchs_robotics/elements/DashboardKit.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
+import 'package:fchs_robotics/pages/dashboard/LoginPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:firebase/firebase.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 
 class DashboardPage extends StatefulWidget {
 
@@ -54,21 +56,45 @@ class DashboardPageState extends State<DashboardPage> {
                       Card(
                         child: Padding(
                           padding: EdgeInsets.all(10.0),
-                          child: Row(
+                          child: Column(
                             children: <Widget>[
-                              Container(
-                                width: 60.0,
-                                height: 60.0,
-                                decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  image: DecorationImage(image: AssetImage('images/members/${widget._userData["avatar"]==null?"nopic.png":widget._userData["avatar"]}'), fit: BoxFit.fill),
-                                ),
+                              Row(
+                                children: <Widget>[
+                                  Container(
+                                    width: 60.0,
+                                    height: 60.0,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      image: DecorationImage(image: AssetImage('images/members/${widget._userData["avatar"]==null?"nopic.png":widget._userData["avatar"]}'), fit: BoxFit.fill),
+                                    ),
+                                  ),
+                                  Padding(padding: EdgeInsets.only(left: 10.0),),
+                                  AutoSizeText("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}!", style: getTextStyle(), minFontSize: 12, maxFontSize: 30.0,),
+                                  Padding(padding: EdgeInsets.only(left: 10.0),),
+                                ],
                               ),
-                              Padding(padding: EdgeInsets.only(left: 10.0),),
-                              AutoSizeText("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}!", style: getTextStyle(), minFontSize: 12, maxFontSize: 30.0,),
-                              Padding(padding: EdgeInsets.only(left: 10.0),),
+                              Row(
+                                children: <Widget>[
+                                  MaterialButton(
+                                    onPressed: () {},
+                                    color: Colors.blue,
+                                    child: AutoSizeText("SETTINGS", style: getTextStyle().copyWith(color: Colors.white)),
+                                  ),
+                                  Padding(padding: EdgeInsets.only(left: 10.0),),
+                                  MaterialButton(
+                                    onPressed: () {
+                                      auth().signOut().then((temp) => {
+                                        Scaffold.of(context).showSnackBar(SnackBar(content: Text("You've been signed out successfully!", style: getTextStyle().copyWith(color: Colors.white),),)),
+                                        Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: LoginPage()))
+                                      });
+                                    },
+                                    color: Colors.orangeAccent,
+                                    child: AutoSizeText("LOG OUT", style: getTextStyle().copyWith(color: Colors.white)),
+                                  ),
+                                ],
+                              ),
                             ],
-                          ),
+                          )
                         ),
                       ),
                       DashboardChecklistElement(widget._userData),
