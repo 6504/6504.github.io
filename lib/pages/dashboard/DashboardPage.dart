@@ -1,11 +1,8 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:firebase/firebase.dart';
-import 'package:firebase/firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-
-import 'LoginPage.dart';
 
 class DashboardPage extends StatefulWidget {
 
@@ -43,7 +40,14 @@ class DashboardPageState extends State<DashboardPage> {
               ListView(
                 children: <Widget>[
                   Padding(padding: EdgeInsets.only(top: 60.0),),
-                  Row(
+                  GridView.count(
+                    crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 5 : 1,
+                    childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2 : 3,
+                    physics: NeverScrollableScrollPhysics(),
+                    crossAxisSpacing: 20.0,
+                    mainAxisSpacing: 20.0,
+                    shrinkWrap: true,
+                    scrollDirection: Axis.vertical,
                     children: <Widget>[
                       Card(
                         child: Padding(
@@ -59,7 +63,7 @@ class DashboardPageState extends State<DashboardPage> {
                                 ),
                               ),
                               Padding(padding: EdgeInsets.only(left: 10.0),),
-                              Text("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}!", style: getTextStyle().copyWith(fontSize: 25.0),),
+                              AutoSizeText("Welcome, ${widget._userData["nickname"]==null?"null":widget._userData["nickname"]}!", style: getTextStyle(), minFontSize: 12, maxFontSize: 30.0,),
                               Padding(padding: EdgeInsets.only(left: 10.0),),
                             ],
                           ),

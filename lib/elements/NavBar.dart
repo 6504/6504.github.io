@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fchs_robotics/pages/AboutPage.dart';
 import 'package:fchs_robotics/pages/HomePage.dart';
 import 'package:fchs_robotics/pages/TeamPage.dart';
@@ -69,19 +70,19 @@ class LargeNavBarElement extends StatelessWidget {
       children: <Widget>[
         MaterialButton(
           onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage(), duration: Duration(milliseconds: 500)))},
-          child: Text("Home", style: getTextStyle()),
+          child: AutoSizeText("Home", style: getTextStyle()),
           color: Colors.white
         ),
         MaterialButton(
             onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: AboutPage(), duration: Duration(milliseconds: 500)))},
-          child: Text("About", style: getTextStyle(),),
+          child: AutoSizeText("About", style: getTextStyle(),),
           color: Colors.white
         ),
         DropdownButton<String>(
           items: <String>['Our Team', 'Team Portal'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value, style: getTextStyle(),),
+              child: AutoSizeText(value, style: getTextStyle(),),
             );
           }).toList(),
           onChanged: (str) {
@@ -93,7 +94,7 @@ class LargeNavBarElement extends StatelessWidget {
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: Text("Team", style: getTextStyle(),),
+              child: AutoSizeText("Team", style: getTextStyle(),),
               color: Colors.white
           ),
           iconSize: 0.0,
@@ -105,7 +106,7 @@ class LargeNavBarElement extends StatelessWidget {
           items: <String>['All Robots', 'FTC Robots', 'VEX Robots', 'FRC Robots'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value, style: getTextStyle(),),
+              child: AutoSizeText(value, style: getTextStyle(),),
             );
           }).toList(),
           onChanged: (str) {
@@ -122,7 +123,7 @@ class LargeNavBarElement extends StatelessWidget {
           items: <String>['Our Sponors', 'Sponsor Us'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value, style: getTextStyle(),),
+              child: AutoSizeText(value, style: getTextStyle(),),
             );
           }).toList(),
           onChanged: (str) {
@@ -130,7 +131,7 @@ class LargeNavBarElement extends StatelessWidget {
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: Text("Sponsors", style: getTextStyle(),),
+              child: AutoSizeText("Sponsors", style: getTextStyle(),),
               color: Colors.white
           ),
           iconSize: 0.0,
@@ -139,7 +140,7 @@ class LargeNavBarElement extends StatelessWidget {
           items: <String>['Contact Us', 'Our Calendar', 'Outreach'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: Text(value, style: getTextStyle(),),
+              child: AutoSizeText(value, style: getTextStyle(),),
             );
           }).toList(),
           onChanged: (str) {
@@ -147,7 +148,7 @@ class LargeNavBarElement extends StatelessWidget {
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: Text("More", style: getTextStyle(),),
+              child: AutoSizeText("More", style: getTextStyle(),),
               color: Colors.white
           ),
           iconSize: 0.0,
@@ -170,19 +171,19 @@ class SmallNavBarElement extends StatelessWidget {
           children: <Widget>[
             MaterialButton(
                 onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage(), duration: Duration(milliseconds: 500)))},
-                child: Text("Home", style: getTextStyle()),
+                child: AutoSizeText("Home", style: getTextStyle()),
                 color: Colors.white
             ),
             MaterialButton(
                 onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: AboutPage(), duration: Duration(milliseconds: 500)))},
-                child: Text("About", style: getTextStyle(),),
+                child: AutoSizeText("About", style: getTextStyle(),),
                 color: Colors.white
             ),
             DropdownButton<String>(
               items: <String>['Our Team', 'Team Portal'].map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: getTextStyle(),),
+                  child: AutoSizeText(value, style: getTextStyle(),),
                 );
               }).toList(),
               onChanged: (str) {
@@ -194,7 +195,7 @@ class SmallNavBarElement extends StatelessWidget {
               },
               hint: MaterialButton(
                   onPressed: () => {},
-                  child: Text("Team", style: getTextStyle(),),
+                  child: AutoSizeText("Team", style: getTextStyle(),),
                   color: Colors.white
               ),
               iconSize: 0.0,
@@ -208,7 +209,7 @@ class SmallNavBarElement extends StatelessWidget {
               items: <String>['All Robots', 'FTC Robots', 'VEX Robots', 'FRC Robots'].map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: getTextStyle(),),
+                  child: AutoSizeText(value, style: getTextStyle(),),
                 );
               }).toList(),
               onChanged: (str) {
@@ -216,7 +217,7 @@ class SmallNavBarElement extends StatelessWidget {
               },
               hint: MaterialButton(
                   onPressed: () => {},
-                  child: Text("Robots", style: getTextStyle(),),
+                  child: AutoSizeText("Robots", style: getTextStyle(),),
                   color: Colors.white
               ),
               iconSize: 0.0,
@@ -225,7 +226,7 @@ class SmallNavBarElement extends StatelessWidget {
               items: <String>['Our Sponors', 'Sponsor Us'].map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: getTextStyle(),),
+                  child: AutoSizeText(value, style: getTextStyle(),),
                 );
               }).toList(),
               onChanged: (str) {
@@ -233,7 +234,7 @@ class SmallNavBarElement extends StatelessWidget {
               },
               hint: MaterialButton(
                   onPressed: () => {},
-                  child: Text("Sponsors", style: getTextStyle(),),
+                  child: AutoSizeText("Sponsors", style: getTextStyle(),),
                   color: Colors.white
               ),
               iconSize: 0.0,
@@ -242,7 +243,7 @@ class SmallNavBarElement extends StatelessWidget {
               items: <String>['Contact Us', 'Our Calendar', 'Outreach', 'Resources'].map((String value) {
                 return DropdownMenuItem<String>(
                   value: value,
-                  child: Text(value, style: getTextStyle(),),
+                  child: AutoSizeText(value, style: getTextStyle(),),
                 );
               }).toList(),
               onChanged: (str) {
@@ -250,7 +251,7 @@ class SmallNavBarElement extends StatelessWidget {
               },
               hint: MaterialButton(
                   onPressed: () => {},
-                  child: Text("More", style: getTextStyle(),),
+                  child: AutoSizeText("More", style: getTextStyle(),),
                   color: Colors.white
               ),
               iconSize: 0.0,
