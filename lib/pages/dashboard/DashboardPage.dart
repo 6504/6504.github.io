@@ -45,7 +45,7 @@ class DashboardPageState extends State<DashboardPage> {
                   Padding(padding: EdgeInsets.only(top: 60.0),),
                   GridView.count(
                     crossAxisCount: MediaQuery.of(context).size.width >= 850 ? 5 : 1,
-                    childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2.5 : 3,
+                    childAspectRatio: MediaQuery.of(context).size.width >= 850 ? 2.5 : 2.5,
                     physics: NeverScrollableScrollPhysics(),
                     crossAxisSpacing: 10.0,
                     mainAxisSpacing: 10.0,

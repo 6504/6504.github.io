@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:fchs_robotics/elements/NavBar.dart';
 import 'package:fchs_robotics/pages/dashboard/DashboardPage.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
@@ -67,7 +68,17 @@ class LoginPage extends StatelessWidget {
                               ),
                               Padding(padding: EdgeInsets.only(left: 10.0),),
                               MaterialButton(
-                                onPressed: () => {},
+                                onPressed: () => {
+                                  if(_email.text == "" || _email.text == null) {
+                                    Scaffold.of(context).showSnackBar(SnackBar(content: Text("Please enter an email to receive a password reset notification", style: getTextStyle().copyWith(color: Colors.white),),))
+                                  } else {
+                                    auth().sendPasswordResetEmail(_email.text).then((temp) => {
+                                      Scaffold.of(context).showSnackBar(SnackBar(content: Text("A password reset request was sent to the specified email.", style: getTextStyle().copyWith(color: Colors.white),),))
+                                    }).catchError((err) => {
+                                      Scaffold.of(context).showSnackBar(SnackBar(content: Text("An unexpected error occured, Please check that your email is correct!", style: getTextStyle().copyWith(color: Colors.white),),))
+                                    })
+                                  }
+                                },
                                 color: Colors.orange,
                                 child: Text("RESET PASSWORD", style: getTextStyle().copyWith(color: Colors.white),),
                               ),

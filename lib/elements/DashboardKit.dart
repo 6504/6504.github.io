@@ -8,7 +8,12 @@ class DashboardChecklistElement extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
-
+    if(_userData["isMentor"] == true && _userData["isStaff"] == false) {
+      return Container(
+        height: 0,
+        width: 0,
+      );
+    }
     return Card(
       child: Padding(
         padding: EdgeInsets.all(10.0),
