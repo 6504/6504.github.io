@@ -51,3 +51,32 @@ class DashboardChecklistElement extends StatelessWidget{
   DashboardChecklistElement(this._userData);
 
 }
+
+class DashboardAddMemberElement extends StatelessWidget {
+
+  Map<String, dynamic> _userData;
+
+  @override
+  Widget build(BuildContext context) {
+    if(!_userData["isMentor"] || !_userData["isStaff"]) {
+      return Container(
+        height: 0,
+        width: 0,
+      );
+    }
+    return Card(
+      child: Padding(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            AutoSizeText("Register a Member:", style: getTextStyle().copyWith(fontSize: 20), minFontSize: 15, maxFontSize: 25,),
+
+          ],
+        ),
+      ),
+    );
+  }
+
+  DashboardAddMemberElement(this._userData);
+
+}

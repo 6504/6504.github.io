@@ -98,6 +98,7 @@ class DashboardPageState extends State<DashboardPage> {
                         ),
                       ),
                       DashboardChecklistElement(widget._userData),
+                      DashboardAddMemberElement(widget._userData),
                     ],
                   ),
                   Padding(padding: EdgeInsets.only(bottom: MediaQuery
