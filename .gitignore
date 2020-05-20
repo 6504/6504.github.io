@@ -1,6 +1,8 @@
 sponsors/index.html
 
 .packages
+.flutter-plugins
+.flutter-plugins-dependencies
 pubspec.lock
 
 # ---> JetBrains

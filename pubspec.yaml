@@ -8,6 +8,8 @@ dependencies:
   flutter:
     sdk: flutter
   firebase: any
+  firebase_auth: ^0.16.0
+  cloud_firestore: ^0.13.2
   page_transition: "^1.1.4"
   auto_size_text: "^2.1.0"
 
