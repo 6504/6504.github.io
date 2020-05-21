@@ -10,6 +10,7 @@ Once you've gotten both, run `flutter build web` and make sure that both dart an
 
 ## Authors
 * [Liam Ryde](https://github.com/xeu100) - Main Developer of Experimental Dart Version
+* [Chandi Kanhai](https://github.com/Chandi-95) - Secondary Developer of Dart Version
 
 ## License
 This software is protected under the MIT license. Basically, you may do whatever you want as long as you give credit where credit is due and don't hold us liable for anything that happens. More information can be found in [`LICENSE`](LICENSE).
