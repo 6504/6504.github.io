@@ -9,16 +9,13 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class NavBar extends StatefulWidget {
-
   @override
   State<StatefulWidget> createState() {
     return NavBarState();
   }
-
 }
 
 class NavBarState extends State<NavBar> with TickerProviderStateMixin {
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,24 +23,38 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
         Container(
             width: MediaQuery.of(context).size.width,
             height: 60.0,
-            decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Color.fromRGBO(8, 87, 33, 1.0),),
+            decoration: BoxDecoration(
+              boxShadow: [BoxShadow(blurRadius: 5.0)],
+              color: Color.fromRGBO(8, 87, 33, 1.0),
+            ),
             child: Align(
               alignment: Alignment.center,
               child: Wrap(
                 spacing: 170.0,
                 children: <Widget>[
-                  Text("FALLS CHURCH HIGH SCHOOL ROBOTICS CLUB", style: getTextStyle().copyWith(color: Colors.white, fontSize: 20.0, fontFamily: 'ConcertOne'), textAlign: TextAlign.center,),
+                  Text(
+                    "FALLS CHURCH HIGH SCHOOL ROBOTICS CLUB",
+                    style: getTextStyle().copyWith(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'ConcertOne'),
+                    textAlign: TextAlign.center,
+                  ),
                 ],
               ),
-            )
-        ),
+            )),
         Align(
           alignment: Alignment.bottomCenter,
           child: Container(
             width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.width >= 850 ? 60.0 : 120.0,
-            decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Color.fromRGBO(44, 119, 68, 1.0),),
-            child: MediaQuery.of(context).size.width >= 850 ? LargeNavBarElement() : SmallNavBarElement(),
+            height: 60.0,
+            decoration: BoxDecoration(
+              boxShadow: [BoxShadow(blurRadius: 5.0)],
+              color: Color.fromRGBO(44, 119, 68, 1.0),
+            ),
+            child: MediaQuery.of(context).size.width >= 850
+                ? LargeNavBarElement()
+                : SmallNavBarElement(),
           ),
         ),
         Align(
@@ -51,17 +62,21 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
           child: Container(
             width: 130,
             height: MediaQuery.of(context).size.width >= 850 ? 130 : 0,
-            decoration: BoxDecoration(boxShadow: [BoxShadow(blurRadius: 5.0)], color: Color.fromRGBO(44, 119, 68, 1.0), borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)), image: DecorationImage(image: AssetImage('images/main_logo.png'))),
+            decoration: BoxDecoration(
+                boxShadow: [BoxShadow(blurRadius: 5.0)],
+                color: Color.fromRGBO(44, 119, 68, 1.0),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(10.0)),
+                image:
+                    DecorationImage(image: AssetImage('images/main_logo.png'))),
           ),
         ),
       ],
     );
   }
-
 }
 
+//Navbar for desktop view (tablets in landscape mode included)
 class LargeNavBarElement extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Wrap(
@@ -69,97 +84,474 @@ class LargeNavBarElement extends StatelessWidget {
       alignment: WrapAlignment.center,
       children: <Widget>[
         MaterialButton(
-          onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage(), duration: Duration(milliseconds: 500)))},
-          child: AutoSizeText("Home", style: getTextStyle()),
-          color: Colors.white
-        ),
+            onPressed: () => {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: HomePage(),
+                          duration: Duration(milliseconds: 500)))
+                },
+            child: AutoSizeText("Home", style: getTextStyle()),
+            color: Colors.white),
         MaterialButton(
-            onPressed: () => {Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: AboutPage(), duration: Duration(milliseconds: 500)))},
-          child: AutoSizeText("About", style: getTextStyle(),),
-          color: Colors.white
-        ),
+            onPressed: () => {
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          type: PageTransitionType.leftToRight,
+                          child: AboutPage(),
+                          duration: Duration(milliseconds: 500)))
+                },
+            child: AutoSizeText(
+              "About",
+              style: getTextStyle(),
+            ),
+            color: Colors.white),
         DropdownButton<String>(
           items: <String>['Our Team', 'Team Portal'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: AutoSizeText(value, style: getTextStyle(),),
+              child: AutoSizeText(
+                value,
+                style: getTextStyle(),
+              ),
             );
           }).toList(),
           onChanged: (str) {
-            if(str == 'Our Team') {
-              Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: TeamPage(), duration: Duration(milliseconds: 500)));
-            } else if(str == 'Team Portal') {
-              Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: LoginPage(), duration: Duration(milliseconds: 500)));
+            if (str == 'Our Team') {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: TeamPage(),
+                      duration: Duration(milliseconds: 500)));
+            } else if (str == 'Team Portal') {
+              Navigator.push(
+                  context,
+                  PageTransition(
+                      type: PageTransitionType.leftToRight,
+                      child: LoginPage(),
+                      duration: Duration(milliseconds: 500)));
             }
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: AutoSizeText("Team", style: getTextStyle(),),
-              color: Colors.white
-          ),
+              child: AutoSizeText(
+                "Team",
+                style: getTextStyle(),
+              ),
+              color: Colors.white),
           iconSize: 0.0,
         ),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 70.0),
         ),
         DropdownButton<String>(
-          items: <String>['All Robots', 'FTC Robots', 'VEX Robots', 'FRC Robots'].map((String value) {
+          items: <String>[
+            'All Robots',
+            'FTC Robots',
+            'VEX Robots',
+            'FRC Robots'
+          ].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: AutoSizeText(value, style: getTextStyle(),),
+              child: AutoSizeText(
+                value,
+                style: getTextStyle(),
+              ),
             );
           }).toList(),
           onChanged: (str) {
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text('This page is under construction!')));
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: Text("Robots", style: getTextStyle(),),
-              color: Colors.white
-          ),
+              child: Text(
+                "Robots",
+                style: getTextStyle(),
+              ),
+              color: Colors.white),
           iconSize: 0.0,
         ),
         DropdownButton<String>(
           items: <String>['Our Sponors', 'Sponsor Us'].map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: AutoSizeText(value, style: getTextStyle(),),
+              child: AutoSizeText(
+                value,
+                style: getTextStyle(),
+              ),
             );
           }).toList(),
           onChanged: (str) {
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text('This page is under construction!')));
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: AutoSizeText("Sponsors", style: getTextStyle(),),
-              color: Colors.white
-          ),
+              child: AutoSizeText(
+                "Sponsors",
+                style: getTextStyle(),
+              ),
+              color: Colors.white),
           iconSize: 0.0,
         ),
         DropdownButton<String>(
-          items: <String>['Contact Us', 'Our Calendar', 'Outreach'].map((String value) {
+          items: <String>['Contact Us', 'Our Calendar', 'Outreach']
+              .map((String value) {
             return DropdownMenuItem<String>(
               value: value,
-              child: AutoSizeText(value, style: getTextStyle(),),
+              child: AutoSizeText(
+                value,
+                style: getTextStyle(),
+              ),
             );
           }).toList(),
           onChanged: (str) {
-            Scaffold.of(context).showSnackBar(SnackBar(content: Text('This page is under construction!')));
+            Scaffold.of(context).showSnackBar(
+                SnackBar(content: Text('This page is under construction!')));
           },
           hint: MaterialButton(
               onPressed: () => {},
-              child: AutoSizeText("More", style: getTextStyle(),),
-              color: Colors.white
-          ),
+              child: AutoSizeText(
+                "More",
+                style: getTextStyle(),
+              ),
+              color: Colors.white),
           iconSize: 0.0,
         ),
       ],
     );
   }
-
 }
 
 class SmallNavBarElement extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      //Place the navigation bar at the bottom and make it the same color as on desktop
+      bottomNavigationBar: BottomAppBar(
+        color: Color.fromRGBO(44, 119, 68, 1.0),
+        //Put everything in a row
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            //Put padding around everything to make the navbar normal height (60) and for spacing
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              //Team logo on the left
+              child: SizedBox(
+                height: 50.0,
+                width: 60.0,
+                child: Image.asset('images/main_logo.png'),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              //Hamburger icon on the right
+              child: Container(
+                child: IconButton(
+                  icon: Icon(Icons.menu),
+                  color: Colors.white,
+                  onPressed: () {
+                    //Bottom sheet that displays all of the link options
+                    showBottomSheet(
+                        context: context,
+                        builder: (context) => Stack(children: <Widget>[
+                              Container(
+                                height: MediaQuery.of(context).size.height - 55,
+                                color: Color.fromRGBO(8, 87, 33, 1.0),
+                                child: Align(
+                                  alignment: Alignment.bottomRight,
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        vertical: 7.0, horizontal: 8.0),
+                                    child: CloseButton(
+                                      color: Colors.white,
+                                      onPressed: () {
+                                        Navigator.pop(context);
+                                      },
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Container(
+                                color: Color.fromRGBO(8, 87, 33, 1.0),
+                                //Cheat-y way of forcing the bottom sheet to not expand past the header
+                                height:
+                                    MediaQuery.of(context).size.height - 115,
+                                child: ListView(
+                                  padding: EdgeInsets.zero,
+                                  children: <Widget>[
+                                    //List of links
+                                    ListTile(
+                                      title: Text(
+                                        'Home',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            PageTransition(
+                                                type: PageTransitionType
+                                                    .leftToRight,
+                                                child: HomePage(),
+                                                duration: Duration(
+                                                    milliseconds: 500)));
+                                      },
+                                    ),
+                                    ListTile(
+                                      title: Text(
+                                        'About',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            PageTransition(
+                                                type: PageTransitionType
+                                                    .leftToRight,
+                                                child: AboutPage(),
+                                                duration: Duration(
+                                                    milliseconds: 500)));
+                                      },
+                                    ),
+                                    ExpansionTile(
+                                      title: Text(
+                                        'Team',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Our Team',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  PageTransition(
+                                                      type: PageTransitionType
+                                                          .leftToRight,
+                                                      child: TeamPage(),
+                                                      duration: Duration(
+                                                          milliseconds: 500)));
+                                            },
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Team Portal',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {
+                                              Navigator.push(
+                                                  context,
+                                                  PageTransition(
+                                                      type: PageTransitionType
+                                                          .leftToRight,
+                                                      child: LoginPage(),
+                                                      duration: Duration(
+                                                          milliseconds: 500)));
+                                            },
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    ExpansionTile(
+                                      title: Text(
+                                        'Robots',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'VEX Robots',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'FTC Robots',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'FRC Robots',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    ExpansionTile(
+                                      title: Text(
+                                        'Sponsors',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Our Sponsors',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Sponsor Us',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    ExpansionTile(
+                                      title: Text(
+                                        'More',
+                                        style: getTextStyle().copyWith(
+                                            color: Colors.white,
+                                            fontSize: 20.0,
+                                            fontFamily: 'NunitoBold'),
+                                      ),
+                                      children: <Widget>[
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Contact Us',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Our Calendar',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Outreach',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 32.0),
+                                          child: ListTile(
+                                            title: Text(
+                                              'Resources',
+                                              style: getTextStyle().copyWith(
+                                                color: Colors.white,
+                                              ),
+                                            ),
+                                            onTap: () {},
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ]));
+                  },
+                ),
+                decoration: BoxDecoration(
+                  border: Border.all(
+                    color: Colors.white,
+                  ),
+                  borderRadius: BorderRadius.circular(10.0),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+//Navbar for mobile view (phones to tablets in portrait mode)
+/*class SmallNavBarElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
@@ -262,4 +654,4 @@ class SmallNavBarElement extends StatelessWidget {
     );
   }
 
-}
+}*/
