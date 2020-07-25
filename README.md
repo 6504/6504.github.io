@@ -2,7 +2,7 @@
 By FCHS' Robotics Club
 
 This repository contains the non-compiled version of [fallschurchrobotics.com](http://fallschurchrobotics.com/).
-We use Github Pages and Google's Flutter for the frontend, while using Google's Firebase as the backend.0
+We use Github Pages and Google's Flutter for the frontend, while using Google's Firebase as the backend.
 
 ## Setting Up Flutter
 Firstly, please make sure that `flutter` is available on your PATH.  
