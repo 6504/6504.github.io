@@ -1,11 +1,13 @@
+import 'package:fchs_robotics/screens/dashboard/LoginPage.dart';
 import 'package:flutter/material.dart';
 //import 'package:firebase/firebase.dart';
 import 'dart:html';
 
-import 'package:fchs_robotics/pages/HomePage.dart';
-import 'package:fchs_robotics/pages/AboutPage.dart';
-import 'package:fchs_robotics/pages/TeamPage.dart';
-
+import 'package:fchs_robotics/themes/style.dart';
+import 'package:fchs_robotics/routes.dart';
+import 'package:fchs_robotics/screens/home/HomePage.dart';
+import 'package:fchs_robotics/screens/AboutPage.dart';
+import 'package:fchs_robotics/screens/TeamPage.dart';
 
 Future main() async {
   //Old initialization method
@@ -19,17 +21,22 @@ Future main() async {
   );*/
   runApp(
     MaterialApp(
-      home: getPage(window.location.hash.substring(1)),
-    )
+      //home: getPage(window.location.hash.substring(1)),
+      theme: mainTheme(),
+
+      //Route data
+      initialRoute: '/',
+      routes: routes,
+    ),
   );
 }
 
-Widget getPage(hash) {
-  if(hash == "/about") {
+/*Widget getPage(hash) {
+  if (hash == "/about") {
     return AboutPage();
-  } else if(hash == "/team") {
+  } else if (hash == "/team") {
     return TeamPage();
   } else {
     return HomePage();
   }
-}
+}*/
