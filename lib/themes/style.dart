@@ -20,13 +20,14 @@ ThemeData mainTheme() {
   return ThemeData(
     fontFamily: 'Nunito',
     textTheme: TextTheme(
-      headline4: TextStyle(fontFamily: 'ConcertOne', fontSize: 30.0),
-      headline5: TextStyle(fontFamily: 'ConcertOne', fontSize: 20.0),
-      headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
-      bodyText1: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w100),
+      //Specify line height or fonts break on android
+      headline4: TextStyle(fontFamily: 'ConcertOne', fontSize: 30.0, height: 1.5),
+      headline5: TextStyle(fontFamily: 'ConcertOne', fontSize: 20.0, height: 1.5),
+      headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, height: 1.5),
+      bodyText1: TextStyle(fontSize: 15.0, fontWeight: FontWeight.w100, height: 1.5),
       bodyText2: TextStyle(fontSize: 15.0, height: 1.5),
       button: TextStyle(fontSize: 15.0, height: 1.5),
-      overline: TextStyle(fontWeight: FontWeight.w100, fontSize: 13.0),
+      overline: TextStyle(fontWeight: FontWeight.w100, fontSize: 13.0, height: 1.5),
     ),
     buttonTheme: mainButton(),
     //ExpansionTile colors

@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:fchs_robotics/themes/style.dart';
+import 'package:flutter/rendering.dart';
 import 'package:page_transition/page_transition.dart';
 
 class NavBarMobile extends StatelessWidget {
