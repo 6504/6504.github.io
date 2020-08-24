@@ -3,6 +3,7 @@ import 'package:fallschurchrobotics/utilities/StorageManager.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   StorageManager.register();
   StorageManager.getStorageInstance().get("theme").then((value) => {
     if(value == null) {
