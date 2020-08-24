@@ -15,7 +15,7 @@ flutter config --enable-web
 ```
 
 ## Running With Flutter
-Once you've setup flutter, it's quite easy (if using Chrome). Just run `flutter run -d chrome` and it'll automatically open.
+Once you've setup flutter, it's quite easy (if using Chrome). Just run `flutter run -d chrome` and it'll automatically open. If you do not have Chrome (or a support Chromium-based browser), run `flutter run -d web`.
 
 ## Authors
 * [Liam Ryde](https://github.com/xeu100) - Current Maintainer of the 2nd Dart version.
