@@ -1,0 +1,11 @@
+{
+    "name": "Falls Church High School Robotics",
+    "short_name": "Falls Church Robotics",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "Team 6504's Open-Source Website",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+}
