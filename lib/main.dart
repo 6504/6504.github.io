@@ -2,7 +2,6 @@ import 'package:fallschurchrobotics/elements/AppWrapper.dart';
 import 'package:fallschurchrobotics/utilities/StorageManager.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase/firebase.dart';
-import 'package:firebase/firestore.dart' as fs;
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
