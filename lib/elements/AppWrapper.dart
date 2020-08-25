@@ -1,6 +1,5 @@
 // Acts as the wrapper for all MaterialApp interactions, before rendering other elements for compatibility.
 import 'package:fallschurchrobotics/pages/Home.dart';
-import 'package:fallschurchrobotics/utilities/StorageManager.dart';
 import 'package:flutter/material.dart';
 
 import 'ScaffoldWrapper.dart';

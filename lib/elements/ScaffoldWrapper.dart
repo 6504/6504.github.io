@@ -39,25 +39,30 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
                 Divider(),
                 MaterialButton(
                   onPressed: () {
-                    StorageManager.getStorageInstance().set("theme", "system");
+                    LocalStorageManager.getStorageInstance().set("theme", "system");
                     Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("System Theme"),
                 ),
                 MaterialButton(
                   onPressed: () {
-                    StorageManager.getStorageInstance().set("theme", "light");
+                    LocalStorageManager.getStorageInstance().set("theme", "light");
                     Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("Robotic Light"),
                 ),
                 MaterialButton(
                   onPressed: () {
-                    StorageManager.getStorageInstance().set("theme", "dark");
+                    LocalStorageManager.getStorageInstance().set("theme", "dark");
                     Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("Jaguar Dark"),
                 ),
+                Divider(),
+                Center(child: Text("Diagnostic Data", style: TextStyle(fontSize: 20),)),
+                Divider(),
+                Center(child: Text("Local Store: "+LocalStorageManager.getStorageInstance().platformName()),),
+                Center(child: Text("Remote Store: Cloud Firestore"),),
               ],
             ),
           );

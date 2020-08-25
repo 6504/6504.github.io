@@ -5,7 +5,7 @@ import 'package:fallschurchrobotics/utilities/stores/WebStoreNoImport.dart'
   if (dart.library.js) 'package:fallschurchrobotics/utilities/stores/WebStore.dart';
 import 'package:flutter/foundation.dart';
 
-class StorageManager {
+class LocalStorageManager {
 
   static StorageInstance _instance;
 
@@ -15,10 +15,10 @@ class StorageManager {
     } else if(io.Platform.isAndroid) {
       _instance = new AndroidStore();
     } else {
-      print("No store is registered, the current platform is unsupported and may not be functional.");
+      print("No local store is registered, the current platform is unsupported and may not be functional.");
     }
     _instance.register();
-    print("The current store is "+_instance.platformName()+" and it was registered.");
+    print("The current local store is "+_instance.platformName()+" and it was registered.");
   }
 
   static StorageInstance getStorageInstance() {
