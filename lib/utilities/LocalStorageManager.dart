@@ -1,13 +1,13 @@
 import 'dart:io' as io;
 
-import 'package:fallschurchrobotics/utilities/stores/AndroidStore.dart';
-import 'package:fallschurchrobotics/utilities/stores/WebStoreNoImport.dart'
-  if (dart.library.js) 'package:fallschurchrobotics/utilities/stores/WebStore.dart';
+import 'package:fallschurchrobotics/utilities/stores/local/AndroidStore.dart';
+import 'package:fallschurchrobotics/utilities/stores/local/WebStoreNoImport.dart'
+  if (dart.library.js) 'package:fallschurchrobotics/utilities/stores/local/WebStore.dart';
 import 'package:flutter/foundation.dart';
 
 class LocalStorageManager {
 
-  static StorageInstance _instance;
+  static LocalStorageInstance _instance;
 
   static void register() {
     if(kIsWeb) {
@@ -21,13 +21,13 @@ class LocalStorageManager {
     print("The current local store is "+_instance.platformName()+" and it was registered.");
   }
 
-  static StorageInstance getStorageInstance() {
+  static LocalStorageInstance getStorageInstance() {
     return _instance;
   }
 
 }
 
-abstract class StorageInstance {
+abstract class LocalStorageInstance {
   String platformName();
   void register();
   Future<String> get(String key);

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "698434717620",
+    "firebase_url": "https://fchs-robotics-f9fb7.firebaseio.com",
+    "project_id": "fchs-robotics-f9fb7",
+    "storage_bucket": "fchs-robotics-f9fb7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698434717620:android:3796013146acee6a9694e1",
+        "android_client_info": {
+          "package_name": "com.fallschurchrobotics.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698434717620-j5dm3m6pa1a8fcnop92c0l26tvkfim5g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPOEiuRaXCAIVwJmAFC8UM1zklfclg35I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698434717620-j5dm3m6pa1a8fcnop92c0l26tvkfim5g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

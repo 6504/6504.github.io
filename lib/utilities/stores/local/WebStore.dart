@@ -1,7 +1,7 @@
-import 'package:fallschurchrobotics/utilities/StorageManager.dart';
+import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
 import 'dart:html' as html;
 
-class WebStore extends StorageInstance {
+class WebStore extends LocalStorageInstance {
   @override
   String platformName() {
     return "Web Local Storage";

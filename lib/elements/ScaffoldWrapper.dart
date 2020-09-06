@@ -1,7 +1,7 @@
 // Acts as the main content display system.
 import 'package:fallschurchrobotics/pages/About.dart';
 import 'package:fallschurchrobotics/pages/Home.dart';
-import 'package:fallschurchrobotics/utilities/StorageManager.dart';
+import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 

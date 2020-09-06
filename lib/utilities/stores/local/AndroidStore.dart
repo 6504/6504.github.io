@@ -1,7 +1,7 @@
-import 'package:fallschurchrobotics/utilities/StorageManager.dart';
+import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
-class AndroidStore extends StorageInstance {
+class AndroidStore extends LocalStorageInstance {
 
   FlutterSecureStorage _storage;
 
