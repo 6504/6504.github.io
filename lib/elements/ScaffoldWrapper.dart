@@ -1,5 +1,5 @@
 // Acts as the main content display system.
-import 'package:fallschurchrobotics/pages/About.dart';
+import 'package:fallschurchrobotics/pages/About/About.dart';
 import 'package:fallschurchrobotics/pages/Home.dart';
 import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
 import 'package:flutter/cupertino.dart';

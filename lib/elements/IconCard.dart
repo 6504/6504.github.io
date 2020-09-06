@@ -1,12 +1,8 @@
-import 'package:fallschurchrobotics/pages/About.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
 
-import 'ScaffoldWrapper.dart';
+class IconCard extends StatelessWidget {
 
-class CompetitionCard extends StatelessWidget {
-
-  AssetImage _assetImage;
+  Icon _icon;
   String _title;
   String _subtitle;
   GestureTapCallback _onTap;
@@ -19,7 +15,7 @@ class CompetitionCard extends StatelessWidget {
         child: Column(
           children: [
             ListTile(
-              leading: Image(image: _assetImage,),
+              leading: _icon,
               title: Text(_title),
               subtitle: Text(_subtitle),
               onTap: _onTap,
@@ -30,6 +26,6 @@ class CompetitionCard extends StatelessWidget {
     );
   }
 
-  CompetitionCard(this._assetImage, this._title, this._subtitle, this._onTap);
+  IconCard(this._icon, this._title, this._subtitle, this._onTap);
 
 }
