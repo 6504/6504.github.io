@@ -2,6 +2,7 @@
 import 'package:fallschurchrobotics/pages/About.dart';
 import 'package:fallschurchrobotics/pages/Home.dart';
 import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -16,6 +17,10 @@ class ScaffoldWrapper extends StatefulWidget {
   
   ScaffoldWrapper(this._page);
 
+  static setIndex(int newIndex) {
+    _currentIndex = newIndex;
+  }
+
 }
 
 class ScaffoldWrapperState extends State<ScaffoldWrapper> {
@@ -27,7 +32,10 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
         title: Text("Falls Church High School Robotics Club"),
         backgroundColor: Theme.of(context).primaryColor,
       ),
-      body: ListView(children: [widget._page], shrinkWrap: true, ),
+      body: Padding(
+        padding: EdgeInsets.all(5),
+        child: ListView(children: [widget._page], shrinkWrap: true, ),
+      ),
       drawer: Builder(
         builder: (BuildContext context) {
           return Drawer(
