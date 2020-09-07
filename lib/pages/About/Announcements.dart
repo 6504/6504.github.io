@@ -28,6 +28,10 @@ class AnnouncementPageState extends State<AnnouncementPage> {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     if(!widget._hasLoaded) {
       WidgetsBinding.instance.addPostFrameCallback((_) => {
+        widget._widgetList.add(MaterialButton(
+          onPressed: () {Navigator.pop(context);},
+          child: Text("Go Back"),
+        )),
         firestore.collection("announcements").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
           querySnapshot.docs.asMap().forEach((key, value) {
             if(key > 14) return;

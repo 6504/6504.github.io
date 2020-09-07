@@ -2,15 +2,15 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fallschurchrobotics/elements/IconCard.dart';
 import 'package:fallschurchrobotics/elements/ScaffoldWrapper.dart';
 import 'package:fallschurchrobotics/pages/About/Announcements.dart';
+import 'package:fallschurchrobotics/pages/About/Events.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:page_transition/page_transition.dart';
 
 class AboutPage extends StatefulWidget {
 
-  String _title = "Loading...";
-  String _body = "We're fetching the latest from the server.";
-  dynamic _timestamp = "";
+  Widget _announcementWidget = Text("");
+  Widget _eventWidget = Text("");
   bool _hasLoaded = false;
 
   @override
@@ -34,9 +34,12 @@ class AboutPageState extends State<AboutPage> {
     if(!widget._hasLoaded) {
       WidgetsBinding.instance.addPostFrameCallback((_) => {
         firestore.collection("announcements").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
-          widget._title = querySnapshot.docs.first.get("title"),
-          widget._body = querySnapshot.docs.first.get("body"),
-          widget._timestamp = DateFormat.yMMMd().format(querySnapshot.docs.first.get("timestamp").toDate()),
+          widget._announcementWidget = IconCard(Icon(Icons.watch_later), querySnapshot.docs.first.get("title"), querySnapshot.docs.first.get("body")+"\n\n"+DateFormat.yMMMd().format(querySnapshot.docs.first.get("timestamp").toDate()).toString(), () {}),
+          widget._hasLoaded = true,
+          updateState(),
+        }),
+        firestore.collection("events").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
+          widget._eventWidget = IconCard(Icon(Icons.watch_later), querySnapshot.docs.first.get("title"), querySnapshot.docs.first.get("description")+"\n\n"+DateFormat.yMMMd().format(querySnapshot.docs.first.get("timestamp").toDate()).toString(), () {}),
           widget._hasLoaded = true,
           updateState(),
         }),
@@ -80,10 +83,17 @@ class AboutPageState extends State<AboutPage> {
           child: Column(
             children: [
               Text("Latest Announcement", style: TextStyle(fontSize: 20),),
-              IconCard(Icon(Icons.watch_later), widget._title, widget._body+"\n\n"+widget._timestamp.toString(), () {}),
+              widget._announcementWidget,
               MaterialButton(
               onPressed: () {Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ScaffoldWrapper(AnnouncementPage())));},
                 child: Text("See More Announcements"),
+              ),
+              Divider(),
+              Text("Latest Event", style: TextStyle(fontSize: 20),),
+              widget._eventWidget,
+              MaterialButton(
+                onPressed: () {Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ScaffoldWrapper(EventsPage())));},
+                child: Text("See More Events"),
               ),
               Divider(),
               Text("Our Timeline", style: TextStyle(fontSize: 20),),
