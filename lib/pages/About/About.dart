@@ -1,13 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:fallschurchrobotics/elements/IconCard.dart';
+import 'package:fallschurchrobotics/elements/ScaffoldWrapper.dart';
+import 'package:fallschurchrobotics/pages/About/Announcements.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:page_transition/page_transition.dart';
 
 class AboutPage extends StatefulWidget {
 
   String _title = "Loading...";
   String _body = "We're fetching the latest from the server.";
   dynamic _timestamp = "";
+  bool _hasLoaded = false;
 
   @override
   State<StatefulWidget> createState() {
@@ -27,15 +31,17 @@ class AboutPageState extends State<AboutPage> {
   @override
   Widget build(BuildContext context) {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
-    WidgetsBinding.instance.addPostFrameCallback((_) => {
-      firestore.collection("announcements").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
-        widget._title = querySnapshot.docs.first.get("title"),
-        widget._body = querySnapshot.docs.first.get("body"),
-        widget._timestamp = DateFormat.yMMMd().format(querySnapshot.docs.first.get("timestamp").toDate()),
-        updateState(),
-      }),
-    });
-
+    if(!widget._hasLoaded) {
+      WidgetsBinding.instance.addPostFrameCallback((_) => {
+        firestore.collection("announcements").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
+          widget._title = querySnapshot.docs.first.get("title"),
+          widget._body = querySnapshot.docs.first.get("body"),
+          widget._timestamp = DateFormat.yMMMd().format(querySnapshot.docs.first.get("timestamp").toDate()),
+          widget._hasLoaded = true,
+          updateState(),
+        }),
+      });
+    }
     return Column(
       children: [
         Stack(
@@ -52,7 +58,7 @@ class AboutPageState extends State<AboutPage> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width>540 ? 250.0 : 0),
+              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width>1000 ? 250.0 : 0),
               child: Padding(
                 padding: EdgeInsets.only(top: MediaQuery.of(context).size.width>540 ? 400.0 : 150.0),
                 child: Card(
@@ -76,7 +82,7 @@ class AboutPageState extends State<AboutPage> {
               Text("Latest Announcement", style: TextStyle(fontSize: 20),),
               IconCard(Icon(Icons.watch_later), widget._title, widget._body+"\n\n"+widget._timestamp.toString(), () {}),
               MaterialButton(
-                onPressed: () {Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));},
+              onPressed: () {Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ScaffoldWrapper(AnnouncementPage())));},
                 child: Text("See More Announcements"),
               ),
               Divider(),

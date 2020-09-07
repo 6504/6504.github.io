@@ -24,7 +24,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width>540 ? 250.0 : 0),
+              padding: EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width>1000 ? 250.0 : 0),
               child: Padding(
                 padding: EdgeInsets.only(top: MediaQuery.of(context).size.width>540 ? 600.0 : 250.0),
                 child: Card(
