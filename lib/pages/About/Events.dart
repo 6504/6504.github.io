@@ -36,15 +36,25 @@ class EventsPageState extends State<EventsPage> {
           onPressed: () {Navigator.pop(context);},
           child: Text("Go Back"),
         )),
+
         firestore.collection("events").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
           querySnapshot.docs.asMap().forEach((key, value) {
             if(key > 14) return;
             if(DateTime.now().isAfter(value.get("timestamp").toDate())) return;
-            widget._widgetList.add(IconCard(Icon(Icons.watch_later), value.get("title"), value.get("description")+"\n\n"+DateFormat.yMMMd().format(value.get("timestamp").toDate()).toString(), () {
+            Widget possibleAction;
+            List<Widget> participants = <Widget>[];
+            List participantList = value.get("participants");
+            participants.add(Text("So far, these people are going:"));
+            if(widget._user != null) {
+              participantList.forEach((dynamic participant) {
+                firestore.collection("users").doc(participant.toString()).get().then((DocumentSnapshot snapshot) => {
+                  participants.add(Text("» "+snapshot.data()["firstName"]+" "+snapshot.data()["lastName"])),
+                });
+              });
+            }
+            widget._widgetList.add(IconCard(Icon(Icons.watch_later), value.get("title"), value.get("description")+"\n\n"+DateFormat.yMMMd().format(value.get("timestamp").toDate()).toString(), () async {
               if(widget._user != null) {
                 showDialog(context: context, builder: (context) {
-                  Widget possibleAction;
-                  List participantList = value.get("participants");
                   if(value.get("participants").contains(widget._user.uid)) {
                     possibleAction = MaterialButton(onPressed: () {
                       participantList.remove(widget._user.uid);
@@ -66,6 +76,10 @@ class EventsPageState extends State<EventsPage> {
                   }
                   return AlertDialog(
                     title: Text("Event Viewer"),
+                    content: Column(
+                      children: participants,
+                      mainAxisSize: MainAxisSize.min,
+                    ),
                     actions: [
                       possibleAction,
                       MaterialButton(onPressed: () {Navigator.pop(context);}, child: Text("Close"),)

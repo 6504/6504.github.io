@@ -96,6 +96,7 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
                                         Navigator.pop(context);
                                       }, child: Text("Login"),)
                                     ],
+                                    mainAxisSize: MainAxisSize.min,
                                   ),
                                   autovalidate: true,
                                 ),
@@ -124,6 +125,7 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
                                           Navigator.pop(context);
                                         }, child: Text("Request Password Reset"),)
                                       ],
+                                      mainAxisSize: MainAxisSize.min,
                                     ),
                                     autovalidate: true,
                                   ),
