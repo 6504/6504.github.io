@@ -10,7 +10,7 @@ class NavBarMiddle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 130,
-      height: MediaQuery.of(context).size.width >= 850 ? 130 : 0,
+      height: MediaQuery.of(context).size.width >= 992 ? 130 : 0,
       decoration: BoxDecoration(
           boxShadow: [BoxShadow(blurRadius: 5.0)],
           color: Color.fromRGBO(44, 119, 68, 1.0),

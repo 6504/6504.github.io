@@ -30,7 +30,8 @@ class NavBarState extends State<NavBar> with TickerProviderStateMixin {
               boxShadow: [BoxShadow(blurRadius: 5.0)],
               color: Color.fromRGBO(44, 119, 68, 1.0),
             ),
-            child: MediaQuery.of(context).size.width >= 850 ? NavBarDesktop() : NavBarMobile(),
+            //Rendering different navbars based on device width
+            child: MediaQuery.of(context).size.width >= 992 ? NavBarDesktop() : NavBarMobile(),
           ),
         ),
         Align(
