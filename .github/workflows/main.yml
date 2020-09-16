@@ -2,15 +2,30 @@ name: Gh-Pages
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v1.3.2
         with:
           channel: 'beta'
-      - uses: erickzanardo/flutter-gh-pages@v1
+      - run: flutter config --enable-web
+        shell: bash
+      - run: flutter pub get
+        shell: bash
+      - run: flutter build web --release
+        shell: bash
+      - run: git config user.name github-actions
+        shell: bash
+      - run: git config user.email github-actions@github.com
+        shell: bash
+      - run: echo "fallschurchrobotics.com" > build/web/CNAME
+        shell: bash
+      - run: git --work-tree build/web add --all
+        shell: bash
+      - run: git commit -m "Automatic deployment by github-actions"
+        shell: bash
+      - run: git push origin HEAD:gh-pages --force
+        shell: bash
