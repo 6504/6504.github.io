@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:fchs_robotics/components/jumbotron/Jumbotron.dart';
 import 'package:fchs_robotics/components/navbar/NavBar.dart';
 import 'package:fchs_robotics/utilities/Defaults.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ import 'dart:html' as html;
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    html.document.title = "Falls Church Robotics Club";
+    html.document.title = 'Falls Church Robotics Club';
     return Scaffold(
         backgroundColor: Colors.white10,
         body: Stack(
@@ -19,58 +20,17 @@ class HomePage extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(top: 60.0),
                 ),
-                Container(
-                    width: MediaQuery.of(context).size.width,
-                    height: MediaQuery.of(context).size.height * 0.79,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage('images/team.jpg'),
-                            alignment: Alignment.center,
-                            fit: BoxFit.cover)),
-                    child: Padding(
-                      padding: EdgeInsets.only(bottom: 10.0),
-                      child: Align(
-                          alignment: Alignment.bottomCenter,
-                          child: Container(
-                            //Properly size card so that it fits on various devices
-                            width: MediaQuery.of(context).size.width >= 850
-                                ? MediaQuery.of(context).size.width * 0.55
-                                : MediaQuery.of(context).size.width * 0.95,
-                            height: MediaQuery.of(context).size.width <= 767
-                                ? MediaQuery.of(context).size.width * 0.65
-                                : MediaQuery.of(context).size.width * 0.18,
-                            child: Card(
-                              child: Padding(
-                                padding: EdgeInsets.all(5.0),
-                                child: Column(
-                                  children: <Widget>[
-                                    Text(
-                                      "Change the World!",
-                                      style: getTextStyle().copyWith(
-                                          fontWeight: FontWeight.bold),
-                                    ),
-                                    Wrap(
-                                      children: <Widget>[
-                                        AutoSizeText(
-                                          "We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.",
-                                          style: getTextStyle(),
-                                          minFontSize: 12.0,
-                                          maxLines: 9,
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ),
-                          )),
-                    )),
+                //Jumbotron code
+                Jumbotron(
+                    'Change the World!',
+                    'We are the Falls Church Robotics Team, otherwise known as Team 6504 - JagWires, based in Falls Church, Virginia. We strive to promote STEM education to our peers and our community through various competitions and events. We participate in multiple robotics competitions, namely the FIRST Robotics Challenge (FRC), FIRST Tech Challenge (FTC), and VEX Robotics.',
+                    'team2019-2020.jpg'),
+                //Home Page Content
                 ListView(
                   shrinkWrap: true,
+                  //Shrink card size only on large devices (landscape tablets and desktops)
                   padding: EdgeInsets.symmetric(
-                          horizontal: MediaQuery.of(context).size.width >= 850
-                              ? 200
-                              : 10)
+                          horizontal: MediaQuery.of(context).size.width >= 992 ? 200 : 10)
                       .copyWith(top: 10.0),
                   scrollDirection: Axis.vertical,
                   physics: ScrollPhysics(),
@@ -97,8 +57,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.blue,
                               child: Text(
                                 "See FRC Info",
-                                style: getTextStyle()
-                                    .copyWith(color: Colors.white),
+                                style: getTextStyle().copyWith(color: Colors.white),
                               ),
                             )
                           ],
@@ -127,8 +86,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.orange,
                               child: Text(
                                 "See FTC Info",
-                                style: getTextStyle()
-                                    .copyWith(color: Colors.white),
+                                style: getTextStyle().copyWith(color: Colors.white),
                               ),
                             )
                           ],
@@ -157,8 +115,7 @@ class HomePage extends StatelessWidget {
                               color: Colors.red,
                               child: Text(
                                 "See VEX Info",
-                                style: getTextStyle()
-                                    .copyWith(color: Colors.white),
+                                style: getTextStyle().copyWith(color: Colors.white),
                               ),
                             )
                           ],
@@ -169,9 +126,7 @@ class HomePage extends StatelessWidget {
                 ),
                 Padding(
                     padding: EdgeInsets.only(
-                        bottom: MediaQuery.of(context).size.width >= 850
-                            ? 130.0
-                            : 200.0))
+                        bottom: MediaQuery.of(context).size.width >= 850 ? 130.0 : 200.0))
               ],
             ),
             NavBar(),
