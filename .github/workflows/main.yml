@@ -21,7 +21,7 @@ jobs:
         shell: bash
       - run: git config user.email github-actions@github.com
         shell: bash
-      - run: cat "fallschurchrobotics.com" > build/web/CNAME
+      - run: echo "fallschurchrobotics.com" > cat build/web/CNAME
         shell: bash
       - run: git --work-tree build/web add --all
         shell: bash
