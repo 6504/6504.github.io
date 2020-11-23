@@ -1,9 +1,5 @@
 import 'package:fallschurchrobotics/elements/ImageCard.dart';
-import 'package:fallschurchrobotics/elements/ScaffoldWrapper.dart';
 import 'package:flutter/material.dart';
-import 'package:page_transition/page_transition.dart';
-
-import 'About/About.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -43,13 +39,13 @@ class HomePage extends StatelessWidget {
           ],
         ),
         ImageCard(AssetImage('assets/competitions/ftc_logo.png'), "The First Tech Challenge", "The First Tech Challenge is one of our beginning steps into the world of robotics for our members. This is an intermediate-level robotics competition. We began competing in the FTC in 2015, and have won several awards since then.", () {
-          Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
+          ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
         }),
         ImageCard(AssetImage('assets/competitions/vex_logo.png'), "The VEX Robotics Challenge", "The VEX Robotics Challenge is another one of our beginning steps into the world of robotics for our members. This is an intermediate-level robotics competition. We began competing in VEX in 2014, and have won several distinctions since our many, many robots.", () {
-          Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
+          ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
         }),
         ImageCard(AssetImage('assets/competitions/frc_logo.png'), "The First Robotics Challenge", "The First Robotics Challenge is the largest competition we compete in. This is an advanced robotics competition aimed at high schoolers specifically, we work with advanced concepts such as industrial tools, CAD electronics, vision programming, and autonomy. It also requires members skilled in business, film, art, and marketing.", () {
-          Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
+          ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
         }),
       ],
     );

@@ -1,7 +1,6 @@
 import 'package:fallschurchrobotics/elements/AppWrapper.dart';
 import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,8 +19,6 @@ void main() {
       AppWrapper.mode = ThemeMode.system,
       LocalStorageManager.getStorageInstance().set("theme", "system"),
     },
-
-    await Firebase.initializeApp(),
 
     runApp(AppWrapper()),
   });

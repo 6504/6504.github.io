@@ -1,11 +1,7 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:fallschurchrobotics/elements/IconCard.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 class AnnouncementPage extends StatefulWidget {
 
-  bool _hasLoaded = false;
   List<Widget> _widgetList = <Widget>[];
 
   @override
@@ -18,30 +14,15 @@ class AnnouncementPage extends StatefulWidget {
 class AnnouncementPageState extends State<AnnouncementPage> {
 
   void updateState() {
-    setState(() {
-
-    });
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    FirebaseFirestore firestore = FirebaseFirestore.instance;
-    if(!widget._hasLoaded) {
-      WidgetsBinding.instance.addPostFrameCallback((_) => {
-        widget._widgetList.add(MaterialButton(
-          onPressed: () {Navigator.pop(context);},
-          child: Text("Go Back"),
-        )),
-        firestore.collection("announcements").orderBy("timestamp", descending: true).get().then((QuerySnapshot querySnapshot) => {
-          querySnapshot.docs.asMap().forEach((key, value) {
-            if(key > 14) return;
-            widget._widgetList.add(IconCard(Icon(Icons.watch_later), value.get("title"), value.get("body")+"\n\n"+DateFormat.yMMMd().format(value.get("timestamp").toDate()).toString(), () {}));
-          }),
-          widget._hasLoaded = true,
-          updateState(),
-        }),
-      });
-    }
+    widget._widgetList.add(MaterialButton(
+      onPressed: () {Navigator.pop(context);},
+      child: Text("Go Back"),
+    ));
     return Column(
       children: [
         Stack(
@@ -50,7 +31,7 @@ class AnnouncementPageState extends State<AnnouncementPage> {
               width: MediaQuery.of(context).size.width,
               height: MediaQuery.of(context).size.width>540 ? 200.0 : 100.0,
               decoration: BoxDecoration(
-                color: Color.fromRGBO(44, 119,68, 1)
+                  color: Color.fromRGBO(44, 119,68, 1)
               ),
             ),
             Padding(

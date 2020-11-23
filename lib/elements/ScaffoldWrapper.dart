@@ -2,14 +2,12 @@
 import 'package:fallschurchrobotics/pages/About/About.dart';
 import 'package:fallschurchrobotics/pages/Home.dart';
 import 'package:fallschurchrobotics/utilities/LocalStorageManager.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 
 class ScaffoldWrapper extends StatefulWidget {
   static int _currentIndex = 0;
   Widget _page;
-  User _user;
 
   @override
   State<StatefulWidget> createState() {
@@ -33,7 +31,6 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
   @override
   Widget build(BuildContext context) {
     BuildContext scaffoldContext;
-    checkAuthentication();
     return Scaffold(
       appBar: AppBar(
         title: Text("Falls Church High School Robotics Club"),
@@ -53,123 +50,94 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
                 Divider(),
                 Center(child: Text("Account Information", style: TextStyle(fontSize: 20),)),
                 Divider(),
-                Builder(builder: (context) {
-                  if(widget._user == null) {
-                    return Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        MaterialButton(onPressed: () {
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                title: Text("Enter Your Credentials"),
-                                content: Form(
-                                  child: Column(
-                                    children: [
-                                      TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: 'Enter your email',
-                                        ),
-                                        controller: _email,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MaterialButton(onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text("Enter Your Credentials"),
+                              content: Form(
+                                child: Column(
+                                  children: [
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Enter your email',
                                       ),
-                                      TextFormField(
-                                        decoration: InputDecoration(
-                                          labelText: 'Enter your password',
-                                        ),
-                                        obscureText: true,
-                                        controller: _password,
-                                      ),
-                                      MaterialButton(onPressed: () {
-                                        FirebaseAuth.instance.signInWithEmailAndPassword(email: _email.text, password: _password.text).then((value) => checkAuthentication()).catchError((error) => {
-                                          if(error.code == 'user-not-found') {
-                                            Navigator.pop(scaffoldContext),
-                                            Scaffold.of(scaffoldContext).showSnackBar(SnackBar(content: Text("The credentials you entered don't exist or are invalid.")))
-                                          } else if(error.code == 'wrong-password') {
-                                            Navigator.pop(scaffoldContext),
-                                            Scaffold.of(scaffoldContext).showSnackBar(SnackBar(content: Text("The credentials you entered don't exist or are invalid.")))
-                                          } else {
-                                            Navigator.pop(scaffoldContext),
-                                            Scaffold.of(scaffoldContext).showSnackBar(SnackBar(content: Text("An unexpected authentication error occurred.")))
-                                          }
-                                        });
-                                        Navigator.pop(context);
-                                      }, child: Text("Login"),)
-                                    ],
-                                    mainAxisSize: MainAxisSize.min,
-                                  ),
-                                  autovalidate: true,
-                                ),
-                              );
-                            }
-                          );
-                        }, child: Text("Login"),),
-                        MaterialButton(onPressed: () {
-                          showDialog(
-                              context: context,
-                              builder: (context) {
-                                return AlertDialog(
-                                  title: Text("Enter Your Email"),
-                                  content: Form(
-                                    child: Column(
-                                      children: [
-                                        TextFormField(
-                                          decoration: InputDecoration(
-                                            labelText: 'Enter your email',
-                                          ),
-                                          controller: _email,
-                                        ),
-                                        MaterialButton(onPressed: () {
-                                          FirebaseAuth.instance.sendPasswordResetEmail(email: _email.text);
-                                          Scaffold.of(scaffoldContext).showSnackBar(SnackBar(content: Text("If that email exists, a password reset request was sent.")));
-                                          Navigator.pop(context);
-                                        }, child: Text("Request Password Reset"),)
-                                      ],
-                                      mainAxisSize: MainAxisSize.min,
+                                      controller: _email,
                                     ),
-                                    autovalidate: true,
-                                  ),
-                                );
-                              }
-                          );
-                        }, child: Text("Reset Password"),),
-                      ],
-                    );
-                  } else {
-                    return Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        MaterialButton(onPressed: () {
-                          FirebaseAuth.instance.signOut().then((value) => checkAuthentication());
-                        }, child: Text("Logout"),),
-                        MaterialButton(onPressed: () {
-                          Scaffold.of(scaffoldContext).showSnackBar(SnackBar(content: Text("There's nothing to manage yet!")));
-                        }, child: Text("My Account"),),
-                      ],
-                    );
-                  }
-                }),
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Enter your password',
+                                      ),
+                                      obscureText: true,
+                                      controller: _password,
+                                    ),
+                                    MaterialButton(onPressed: () {
+                                      Navigator.pop(context);
+                                    }, child: Text("Login"),)
+                                  ],
+                                  mainAxisSize: MainAxisSize.min,
+                                ),
+                                autovalidateMode: AutovalidateMode.always,
+                              ),
+                            );
+                          }
+                      );
+                    }, child: Text("Login"),),
+                    MaterialButton(onPressed: () {
+                      showDialog(
+                          context: context,
+                          builder: (context) {
+                            return AlertDialog(
+                              title: Text("Enter Your Email"),
+                              content: Form(
+                                child: Column(
+                                  children: [
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Enter your email',
+                                      ),
+                                      controller: _email,
+                                    ),
+                                    MaterialButton(onPressed: () {
+                                      ScaffoldMessenger.of(scaffoldContext).showSnackBar(SnackBar(content: Text("If that email exists, a password reset request was sent.")));
+                                      Navigator.pop(context);
+                                    }, child: Text("Request Password Reset"),)
+                                  ],
+                                  mainAxisSize: MainAxisSize.min,
+                                ),
+                                autovalidateMode: AutovalidateMode.always,
+                              ),
+                            );
+                          }
+                      );
+                    }, child: Text("Reset Password"),),
+                  ],
+                ),
                 Divider(),
                 Center(child: Text("Change Your Colors", style: TextStyle(fontSize: 20),)),
                 Divider(),
                 MaterialButton(
                   onPressed: () {
                     LocalStorageManager.getStorageInstance().set("theme", "system");
-                    Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
+                    ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("System Theme"),
                 ),
                 MaterialButton(
                   onPressed: () {
                     LocalStorageManager.getStorageInstance().set("theme", "light");
-                    Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
+                    ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("Robotic Light"),
                 ),
                 MaterialButton(
                   onPressed: () {
                     LocalStorageManager.getStorageInstance().set("theme", "dark");
-                    Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
+                    ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Your wish is my command, please reload the page.")));
                   },
                   child: Text("Jaguar Dark"),
                 ),
@@ -188,12 +156,12 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
          return BottomNavigationBar(
             type: BottomNavigationBarType.fixed,
             items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), title: Text("Home")),
-              BottomNavigationBarItem(icon: Icon(Icons.info_outline), title: Text("About")),
-              BottomNavigationBarItem(icon: Icon(Icons.public), title: Text("Team")),
-              BottomNavigationBarItem(icon: Icon(Icons.developer_board), title: Text("Robots")),
-              BottomNavigationBarItem(icon: Icon(Icons.account_balance), title: Text("Sponsors")),
-              BottomNavigationBarItem(icon: Icon(Icons.library_books), title: Text("Others")),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+              BottomNavigationBarItem(icon: Icon(Icons.info_outline), label: "About"),
+              BottomNavigationBarItem(icon: Icon(Icons.public), label: "Team"),
+              BottomNavigationBarItem(icon: Icon(Icons.developer_board), label: "Robots"),
+              BottomNavigationBarItem(icon: Icon(Icons.account_balance), label: "Sponsors"),
+              BottomNavigationBarItem(icon: Icon(Icons.library_books), label: "Others"),
             ],
             currentIndex: ScaffoldWrapper._currentIndex,
             onTap: (i) {
@@ -204,7 +172,7 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
               } else if(i == 1) {
                 Navigator.push(context, PageTransition(type: PageTransitionType.fade, child: ScaffoldWrapper(AboutPage())));
               } else {
-                Scaffold.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
+                ScaffoldMessenger.of(context).showSnackBar(new SnackBar(content: Text("Woah there! You're going to a page that doesn't currently exist.")));
                 ScaffoldWrapper._currentIndex = old;
               }
               setState(() {
@@ -215,19 +183,6 @@ class ScaffoldWrapperState extends State<ScaffoldWrapper> {
         },
       )
     );
-  }
-
-  void checkAuthentication() {
-    FirebaseAuth.instance.authStateChanges().listen((user) {
-      if (user != null) {
-        widget._user = user;
-      } else {
-        widget._user = null;
-      }
-    });
-    setState(() {
-
-    });
   }
 
 }
